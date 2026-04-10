@@ -20,14 +20,14 @@ export default function Recognize() {
   return (
     <section
       id="recognize"
-      className="relative w-full bg-accent text-bg scroll-mt-24"
+      className="relative w-full bg-bg-soft scroll-mt-24"
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-20 md:py-28 lg:py-32">
-        <h2 className="text-center text-[32px] md:text-[40px] lg:text-[44px] font-semibold leading-[1.15]">
+        <h2 className="text-center text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15]">
           Узнаёте себя?
         </h2>
 
-        <p className="mt-5 md:mt-6 max-w-[620px] mx-auto text-center text-base md:text-lg text-bg/80 leading-[1.6]">
+        <p className="mt-5 md:mt-6 max-w-[620px] mx-auto text-center text-base md:text-lg text-text-muted leading-[1.6]">
           Если что-то из&nbsp;этого про вас — вы&nbsp;не&nbsp;одна. И&nbsp;это
           не&nbsp;про слабость характера или отсутствие силы воли. С&nbsp;этим
           работают — и&nbsp;я&nbsp;помогаю.
@@ -37,12 +37,12 @@ export default function Recognize() {
           {cards.map((card) => (
             <article
               key={card.title}
-              className="rounded-xl bg-accent-dark/40 p-7 md:p-8 lg:p-9 flex flex-col gap-3 md:gap-4 border border-bg/10"
+              className="rounded-xl bg-bg p-7 md:p-8 lg:p-9 flex flex-col gap-3 md:gap-4"
             >
-              <h3 className="text-[20px] md:text-[22px] font-medium text-bg leading-tight">
+              <h3 className="text-[20px] md:text-[22px] font-medium text-accent leading-tight">
                 {card.title}
               </h3>
-              <p className="text-[16px] md:text-[17px] leading-[1.65] text-bg/85">
+              <p className="text-[16px] md:text-[17px] leading-[1.65] text-text">
                 {card.text}
               </p>
             </article>
