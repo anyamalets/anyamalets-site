@@ -4,6 +4,11 @@ const contacts = [
   { label: "Email", value: "psy@anyamalets.ru", href: "mailto:psy@anyamalets.ru" },
 ];
 
+const documents = [
+  { label: "Договор-оферта", href: "/offer" },
+  { label: "Обработка персональных данных", href: "/offer#pdn" },
+];
+
 export default function Footer() {
   const year = new Date().getFullYear();
 
@@ -12,7 +17,7 @@ export default function Footer() {
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-8">
           {/* Brand column */}
-          <div className="md:col-span-7 lg:col-span-8 flex flex-col">
+          <div className="md:col-span-5 lg:col-span-5 flex flex-col">
             <p className="font-heading text-[22px] md:text-[24px] font-medium leading-tight">
               Анна Малюточкина
             </p>
@@ -27,7 +32,7 @@ export default function Footer() {
           </div>
 
           {/* Contacts */}
-          <div className="md:col-span-5 lg:col-span-4 flex flex-col">
+          <div className="md:col-span-3 lg:col-span-3 flex flex-col">
             <h3 className="text-[12px] uppercase tracking-[0.14em] text-bg/50 mb-4 md:mb-5">
               Связаться
             </h3>
@@ -44,6 +49,25 @@ export default function Footer() {
                   >
                     <span className="text-bg/50 text-[13px]">{c.label}</span>
                     <span>{c.value}</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Documents */}
+          <div className="md:col-span-4 lg:col-span-4 flex flex-col">
+            <h3 className="text-[12px] uppercase tracking-[0.14em] text-bg/50 mb-4 md:mb-5">
+              Документы
+            </h3>
+            <ul className="flex flex-col gap-2.5">
+              {documents.map((d) => (
+                <li key={d.label}>
+                  <a
+                    href={d.href}
+                    className="text-[15px] md:text-[16px] text-bg hover:text-accent transition-colors"
+                  >
+                    {d.label}
                   </a>
                 </li>
               ))}
