@@ -3,9 +3,10 @@
 import { useEffect, useState } from "react";
 
 const navLinks = [
-  { label: "Обо мне", href: "#about" },
   { label: "Как я работаю", href: "#methods" },
+  { label: "Обо мне", href: "#about" },
   { label: "Первая встреча", href: "#first-session" },
+  { label: "Вопросы", href: "#faq" },
   { label: "Стоимость", href: "#zapis" },
 ];
 

@@ -153,7 +153,7 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="relative w-full bg-bg-soft scroll-mt-24"
+      className="relative w-full bg-bg scroll-mt-24"
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-20 md:py-28 lg:py-32">
         <div className="max-w-[760px]">

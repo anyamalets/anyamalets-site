@@ -11,10 +11,6 @@ export default function Pricing() {
           <h2 className="text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15]">
             Стоимость и&nbsp;запись
           </h2>
-          <p className="mt-5 md:mt-6 text-base md:text-lg text-text-muted leading-[1.6]">
-            Выберите удобное время ниже — я&nbsp;получу заявку
-            и&nbsp;свяжусь с&nbsp;вами, чтобы подтвердить встречу.
-          </p>
         </div>
 
         {/* Price card */}
@@ -38,11 +34,49 @@ export default function Pricing() {
           </div>
         </div>
 
+        {/* Steps before widget */}
+        <ol className="mt-12 md:mt-16 mx-auto max-w-[720px] flex flex-col gap-5 md:gap-6">
+          {[
+            {
+              n: "1",
+              text: (
+                <>Выберите удобное время в&nbsp;календаре ниже</>
+              ),
+            },
+            {
+              n: "2",
+              text: (
+                <>
+                  Я&nbsp;отвечу в&nbsp;Telegram в&nbsp;течение суток —
+                  подтвержу встречу и&nbsp;пришлю ссылку для оплаты
+                </>
+              ),
+            },
+            {
+              n: "3",
+              text: (
+                <>
+                  Накануне пришлю ссылку на&nbsp;встречу в&nbsp;Яндекс.Телемост
+                </>
+              ),
+            },
+          ].map((step) => (
+            <li key={step.n} className="flex items-start gap-4 md:gap-5">
+              <span
+                aria-hidden="true"
+                className="flex-none mt-0.5 inline-flex items-center justify-center w-7 h-7 md:w-8 md:h-8 rounded-full border border-accent text-accent font-heading text-[13px] md:text-[14px] font-medium tabular-nums"
+              >
+                {step.n}
+              </span>
+              <p className="text-[16px] md:text-[17px] leading-[1.6] text-text">
+                {step.text}
+              </p>
+            </li>
+          ))}
+        </ol>
+
         {/* Planerka widget */}
         <div className="mt-12 md:mt-16">
-          <h3 className="text-[22px] md:text-[26px] font-medium text-text mb-6 md:mb-8">
-            Выбрать время
-          </h3>
           <div
             className="app-planerka-embed rounded-xl overflow-hidden bg-bg"
             data-planerka-embed="default"
