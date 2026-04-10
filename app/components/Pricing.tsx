@@ -24,14 +24,9 @@ export default function Pricing() {
             </span>
           </div>
 
-          <div className="flex flex-col gap-1.5 text-[15px] md:text-[16px] text-text leading-[1.5]">
-            <p>
-              <span className="font-medium">50 минут</span> · онлайн-сессия
-            </p>
-            <p className="text-text-muted">
-              Обычно встречаемся раз в&nbsp;неделю
-            </p>
-          </div>
+          <p className="text-[15px] md:text-[16px] text-text leading-[1.5]">
+            <span className="font-medium">50 минут</span> · онлайн-сессия
+          </p>
         </div>
 
         {/* Steps before widget */}
