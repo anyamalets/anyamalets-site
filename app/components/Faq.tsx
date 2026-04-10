@@ -35,13 +35,13 @@ export default function Faq() {
   return (
     <section id="faq" className="relative w-full bg-bg scroll-mt-24">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-20 md:py-28 lg:py-32">
-        <div className="max-w-[760px]">
+        <div className="max-w-[760px] mx-auto text-center">
           <h2 className="text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15]">
             Частые вопросы
           </h2>
         </div>
 
-        <div className="mt-12 md:mt-16 max-w-[900px] flex flex-col gap-3 md:gap-4">
+        <div className="mt-12 md:mt-16 mx-auto max-w-[900px] flex flex-col gap-3 md:gap-4">
           {items.map((item, idx) => (
             <details
               key={idx}

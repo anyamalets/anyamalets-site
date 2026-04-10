@@ -156,23 +156,17 @@ export default function Education() {
       className="relative w-full bg-bg scroll-mt-24"
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-20 md:py-28 lg:py-32">
-        <div className="max-w-[760px]">
-          <h2 className="text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15]">
-            Образование
-          </h2>
-          <p className="mt-5 md:mt-6 text-base md:text-lg text-text-muted leading-[1.6]">
-            Профессиональная подготовка по&nbsp;направлениям. Нажмите
-            на&nbsp;категорию, чтобы развернуть список.
-          </p>
-        </div>
+        <h2 className="text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15]">
+          Образование
+        </h2>
 
-        <div className="mt-12 md:mt-16 flex flex-col gap-3 md:gap-4">
+        <div className="mt-12 md:mt-16 max-w-[900px] border-t border-bg-beige">
           {categories.map((cat) => (
             <details
               key={cat.title}
-              className="group rounded-xl border border-bg-beige bg-bg-soft/60 open:bg-bg-soft transition-colors"
+              className="group border-b border-bg-beige"
             >
-              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none px-6 md:px-8 py-5 md:py-6 rounded-xl">
+              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none py-6 md:py-7">
                 <span className="flex items-baseline gap-3 md:gap-4 flex-wrap">
                   <span className="text-[18px] md:text-[20px] font-medium text-text">
                     {cat.title}
@@ -200,7 +194,7 @@ export default function Education() {
                 </svg>
               </summary>
 
-              <ul className="px-6 md:px-8 pb-6 md:pb-8 flex flex-col gap-4">
+              <ul className="pb-7 md:pb-8 flex flex-col gap-4">
                 {cat.items.map((item, idx) => (
                   <li
                     key={idx}

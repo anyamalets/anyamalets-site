@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <section id="about" className="relative w-full bg-bg-soft scroll-mt-24">
-      <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-20 md:py-28 lg:py-32">
+      <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-28 md:py-36 lg:py-44">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-start">
           {/* Text — first on desktop */}
           <div className="md:col-span-8 md:col-start-1 md:row-start-1 order-2 md:order-1 flex flex-col">
@@ -11,7 +11,7 @@ export default function About() {
               Обо мне
             </p>
 
-            <h2 className="text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15]">
+            <h2 className="text-[40px] md:text-[56px] lg:text-[64px] font-semibold text-text leading-[1.05] tracking-tight">
               Анна Малюточкина
             </h2>
 
@@ -37,7 +37,7 @@ export default function About() {
 
           {/* Photo — right side, smaller */}
           <div className="md:col-span-4 md:col-start-9 md:row-start-1 order-1 md:order-2">
-            <div className="relative mx-auto w-full max-w-[300px] md:max-w-[320px] aspect-[3/4] overflow-hidden rounded-xl bg-bg-soft md:mt-4">
+            <div className="relative mx-auto w-full max-w-[300px] md:max-w-[320px] aspect-[3/4] overflow-hidden rounded-xl md:mt-4">
               <Image
                 src="/photos/about.jpg"
                 alt="Анна Малюточкина за рабочим столом"

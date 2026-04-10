@@ -7,7 +7,7 @@ export default function Hero() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center py-16 md:py-24 lg:py-28">
           {/* Photo — second on mobile, first on desktop */}
           <div className="md:col-span-5 lg:col-span-5 order-2 md:order-1">
-            <div className="relative mx-auto w-full max-w-[420px] md:max-w-none aspect-[2/3] overflow-hidden rounded-xl bg-bg-soft">
+            <div className="relative mx-auto w-full max-w-[420px] md:max-w-none aspect-[2/3] overflow-hidden rounded-xl">
               <Image
                 src="/photos/hero.jpg"
                 alt="Анна Малюточкина, психолог"
@@ -39,18 +39,12 @@ export default function Hero() {
               и&nbsp;силы воли.
             </p>
 
-            <div className="mt-8 md:mt-10 flex flex-wrap items-center gap-3 sm:gap-4">
+            <div className="mt-8 md:mt-10">
               <a
                 href="#zapis"
                 className="inline-flex items-center justify-center rounded-lg bg-accent px-7 py-4 text-base md:text-lg font-medium text-bg transition-colors hover:bg-accent-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
               >
                 Записаться на встречу
-              </a>
-              <a
-                href="#recognize"
-                className="inline-flex items-center justify-center rounded-lg border border-accent/40 px-7 py-4 text-base md:text-lg font-medium text-accent transition-colors hover:bg-bg-soft hover:border-accent focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
-              >
-                Узнать больше
               </a>
             </div>
           </div>

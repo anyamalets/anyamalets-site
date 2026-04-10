@@ -30,7 +30,7 @@ export default function Pricing() {
         </div>
 
         {/* Steps before widget */}
-        <ol className="mt-12 md:mt-16 mx-auto max-w-[720px] flex flex-col gap-5 md:gap-6">
+        <ol className="mt-12 md:mt-16 mx-auto max-w-[560px] flex flex-col gap-5 md:gap-6">
           {[
             {
               n: "1",
@@ -56,12 +56,12 @@ export default function Pricing() {
               ),
             },
           ].map((step) => (
-            <li key={step.n} className="flex items-start gap-4 md:gap-5">
+            <li key={step.n} className="flex items-baseline gap-4">
               <span
                 aria-hidden="true"
-                className="flex-none mt-0.5 inline-flex items-center justify-center w-7 h-7 md:w-8 md:h-8 rounded-full border border-accent text-accent font-heading text-[13px] md:text-[14px] font-medium tabular-nums"
+                className="flex-none font-heading text-accent text-[16px] md:text-[17px] font-medium tabular-nums"
               >
-                {step.n}
+                {step.n}.
               </span>
               <p className="text-[16px] md:text-[17px] leading-[1.6] text-text">
                 {step.text}
