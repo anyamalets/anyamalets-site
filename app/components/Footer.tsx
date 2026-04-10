@@ -24,7 +24,7 @@ export default function Footer() {
             <p className="mt-2 text-[15px] md:text-[16px] text-bg/70 leading-[1.5]">
               Психолог · расстройства пищевого поведения
             </p>
-            <p className="mt-5 md:mt-6 max-w-[440px] text-[13px] text-bg/50 leading-[1.55]">
+            <p className="mt-8 md:mt-10 max-w-[440px] text-[13px] text-bg/50 leading-[1.55]">
               Член АКПН (Ассоциация специалистов контекстуально-поведенческой
               науки), АРППС (Ассоциация специалистов, информированных
               о&nbsp;РПП), Rome Foundation GastroPsych, США.

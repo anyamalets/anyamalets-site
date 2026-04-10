@@ -37,13 +37,13 @@ export default function Recognize() {
           {cards.map((card) => (
             <article
               key={card.title}
-              className="relative rounded-xl bg-bg p-7 md:p-8 lg:p-9 flex flex-col gap-3 md:gap-4"
+              className="rounded-xl bg-bg p-7 md:p-8 lg:p-9 flex flex-col gap-3 md:gap-4"
             >
-              <span
-                aria-hidden="true"
-                className="absolute top-7 md:top-8 lg:top-9 left-7 md:left-8 lg:left-9 h-[2px] w-7 bg-accent"
-              />
-              <h3 className="mt-5 md:mt-6 text-[20px] md:text-[22px] font-medium text-accent leading-tight">
+              <h3 className="text-[20px] md:text-[22px] font-medium text-accent leading-tight flex items-center gap-3">
+                <span
+                  aria-hidden="true"
+                  className="inline-block h-[2px] w-6 bg-accent"
+                />
                 {card.title}
               </h3>
               <p className="text-[16px] md:text-[17px] leading-[1.65] text-text">

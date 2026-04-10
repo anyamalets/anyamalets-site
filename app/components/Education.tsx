@@ -166,7 +166,7 @@ export default function Education() {
               key={cat.title}
               className="group border-b border-bg-beige"
             >
-              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none py-6 md:py-7">
+              <summary className="flex items-center justify-between gap-4 cursor-pointer list-none py-6 md:py-7 px-2 -mx-2 rounded-md hover:bg-bg-soft/50 transition-colors">
                 <span className="flex items-baseline gap-3 md:gap-4 flex-wrap">
                   <span className="text-[18px] md:text-[20px] font-medium text-text">
                     {cat.title}
@@ -183,10 +183,10 @@ export default function Education() {
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 24 24"
-                  className="shrink-0 h-5 w-5 text-accent transition-transform duration-200 group-open:rotate-180"
+                  className="shrink-0 h-6 w-6 text-accent transition-transform duration-200 group-open:rotate-180"
                   fill="none"
                   stroke="currentColor"
-                  strokeWidth="2"
+                  strokeWidth="2.25"
                   strokeLinecap="round"
                   strokeLinejoin="round"
                 >

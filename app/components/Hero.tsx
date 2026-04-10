@@ -25,7 +25,7 @@ export default function Hero() {
               Психолог · расстройства пищевого поведения
             </p>
 
-            <h1 className="text-[36px] leading-[1.1] sm:text-[44px] md:text-[52px] lg:text-[60px] font-semibold text-text tracking-tight">
+            <h1 className="text-[32px] leading-[1.1] sm:text-[44px] md:text-[52px] lg:text-[60px] font-semibold text-text tracking-tight">
               Устали от цикла
               <br />
               <span className="text-accent">диета — срыв — вина?</span>

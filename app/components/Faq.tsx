@@ -35,26 +35,26 @@ export default function Faq() {
   return (
     <section id="faq" className="relative w-full bg-bg scroll-mt-24">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-20 md:py-28 lg:py-32">
-        <div className="max-w-[760px] mx-auto text-center">
+        <div className="max-w-[900px]">
           <h2 className="text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15]">
             Частые вопросы
           </h2>
         </div>
 
-        <div className="mt-12 md:mt-16 mx-auto max-w-[900px] flex flex-col gap-3 md:gap-4">
+        <div className="mt-12 md:mt-16 max-w-[900px] flex flex-col gap-3 md:gap-4">
           {items.map((item, idx) => (
             <details
               key={idx}
               className="group rounded-xl border border-bg-beige bg-bg-soft/60 open:bg-bg-soft transition-colors"
             >
-              <summary className="flex items-start justify-between gap-5 cursor-pointer list-none px-6 md:px-8 py-5 md:py-6 rounded-xl">
+              <summary className="flex items-center justify-between gap-5 cursor-pointer list-none px-6 md:px-8 py-5 md:py-6 rounded-xl">
                 <span className="text-[17px] md:text-[19px] font-medium text-text leading-[1.35]">
                   {item.q}
                 </span>
                 <svg
                   aria-hidden="true"
                   viewBox="0 0 24 24"
-                  className="shrink-0 mt-1 h-5 w-5 text-accent transition-transform duration-200 group-open:rotate-180"
+                  className="shrink-0 h-5 w-5 text-accent transition-transform duration-200 group-open:rotate-180"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
