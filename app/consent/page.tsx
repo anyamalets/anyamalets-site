@@ -21,7 +21,7 @@ function Section({
       id={id}
       className="scroll-mt-24 mt-14 md:mt-20 pt-14 md:pt-20 border-t border-bg-beige first:mt-12 first:pt-0 first:border-t-0"
     >
-      <h2 className="text-[22px] md:text-[28px] font-semibold text-text leading-tight">
+      <h2 className="text-[22px] md:text-[26px] font-semibold text-text leading-tight">
         {title}
       </h2>
       <div className="mt-5 md:mt-6 flex flex-col gap-4 text-[16px] md:text-[17px] leading-[1.7] text-text">

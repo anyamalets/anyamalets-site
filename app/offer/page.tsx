@@ -314,16 +314,18 @@ export default function OfferPage() {
           <P>
             6.2. Полная версия информированного согласия, описывающая
             подход к&nbsp;работе, организационные условия и&nbsp;правила
-            взаимодействия, размещена на&nbsp;Сайте по&nbsp;адресу:{" "}
+            взаимодействия, размещена на&nbsp;Сайте. Оплачивая Услуги,
+            Заказчик подтверждает, что ознакомлен с&nbsp;её&nbsp;содержанием.
+          </P>
+          <p>
             <a
               href="/consent"
-              className="text-accent hover:underline"
+              className="inline-flex items-center gap-2 text-accent font-medium hover:text-accent-dark transition-colors"
             >
-              /consent
+              Перейти к&nbsp;информированному согласию
+              <span aria-hidden="true">→</span>
             </a>
-            . Оплачивая Услуги, Заказчик подтверждает, что ознакомлен
-            с&nbsp;её&nbsp;содержанием.
-          </P>
+          </p>
         </Section>
 
         <Section id="p7" title="7. Конфиденциальность">

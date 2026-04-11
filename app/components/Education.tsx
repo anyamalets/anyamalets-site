@@ -160,7 +160,7 @@ export default function Education() {
           Образование
         </h2>
 
-        <div className="mt-12 md:mt-16 max-w-[900px] border-t border-bg-beige">
+        <div className="mt-12 md:mt-16 max-w-[900px]">
           {categories.map((cat) => (
             <details
               key={cat.title}
