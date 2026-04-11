@@ -39,7 +39,8 @@ export default function Hero() {
               и&nbsp;силы воли.
             </p>
 
-            <div className="mt-8 md:mt-10">
+            {/* Desktop CTA — hidden on mobile */}
+            <div className="hidden md:block mt-8 md:mt-10">
               <a
                 href="#zapis"
                 data-ym-goal="click_zapis_button"
@@ -48,6 +49,17 @@ export default function Hero() {
                 Записаться на встречу
               </a>
             </div>
+          </div>
+
+          {/* Mobile CTA — hidden on desktop, after photo */}
+          <div className="md:hidden order-3 flex justify-center">
+            <a
+              href="#zapis"
+              data-ym-goal="click_zapis_button"
+              className="inline-flex items-center justify-center rounded-lg bg-accent px-7 py-4 text-base font-medium text-bg transition-colors hover:bg-accent-dark"
+            >
+              Записаться на встречу
+            </a>
           </div>
         </div>
       </div>
