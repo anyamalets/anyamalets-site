@@ -7,7 +7,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center">
           {/* Text — first on desktop */}
           <div className="md:col-span-7 md:col-start-1 md:row-start-1 order-2 md:order-1 flex flex-col">
-            <h2 className="text-[40px] md:text-[56px] lg:text-[64px] font-semibold text-text leading-[1.05] tracking-tight">
+            <h2 className="text-[32px] md:text-[44px] lg:text-[56px] font-semibold text-text leading-[1.1] tracking-tight">
               Анна Малюточкина
             </h2>
 
