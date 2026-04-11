@@ -77,8 +77,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom strip */}
-        <div className="mt-14 md:mt-16 pt-8 border-t border-bg/10 text-[13px] text-bg/50 leading-[1.5]">
+        <div className="mt-14 md:mt-16 pt-8 border-t border-bg/10 flex flex-col md:flex-row gap-3 md:gap-6 md:items-center md:justify-between text-[13px] text-bg/50 leading-[1.5]">
           <p>© {year} · Малюточкина Анна Владимировна · ИНН 730292199734</p>
+          <p>Сайт использует Яндекс.Метрику</p>
         </div>
       </div>
     </footer>
