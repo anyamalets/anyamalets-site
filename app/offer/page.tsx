@@ -56,8 +56,8 @@ export default function OfferPage() {
             <span aria-hidden="true">←</span>
             <span>На главную</span>
           </a>
-          <h1 className="mt-8 md:mt-10 text-[32px] md:text-[40px] font-semibold leading-[1.15]">
-            Договор-оферта оказания информационно-консультационных&nbsp;услуг
+          <h1 className="mt-8 md:mt-10 text-[28px] md:text-[40px] font-semibold leading-[1.15] break-words hyphens-auto">
+            Договор-оферта оказания психологических услуг
           </h1>
           <p className="mt-4 text-[15px] md:text-[16px] text-text-muted">
             Публичная оферта на&nbsp;оказание психологических услуг ·
