@@ -6,7 +6,7 @@ export default function About() {
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-28 md:py-36 lg:py-44">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-start">
           {/* Text — first on desktop */}
-          <div className="md:col-span-8 md:col-start-1 md:row-start-1 order-2 md:order-1 flex flex-col">
+          <div className="md:col-span-7 md:col-start-1 md:row-start-1 order-2 md:order-1 flex flex-col">
             <h2 className="text-[40px] md:text-[56px] lg:text-[64px] font-semibold text-text leading-[1.05] tracking-tight">
               Анна Малюточкина
             </h2>
@@ -25,20 +25,26 @@ export default function About() {
                 а&nbsp;помочь выйти из&nbsp;той, в&nbsp;которой вы живёте.
               </p>
               <p>
+                Цель нашей работы — не&nbsp;избавиться от&nbsp;тревоги, стыда
+                или&nbsp;навязчивых мыслей о&nbsp;еде, а&nbsp;изменить ваши
+                отношения с&nbsp;ними. Строить жизнь вокруг своих ценностей,
+                а&nbsp;не&nbsp;вокруг борьбы с&nbsp;едой и&nbsp;телом.
+              </p>
+              <p>
                 Я&nbsp;говорю об&nbsp;этом не&nbsp;только как специалист.
                 У&nbsp;меня был свой путь с&nbsp;РПП.
               </p>
             </div>
           </div>
 
-          {/* Photo — right side, smaller */}
-          <div className="md:col-span-4 md:col-start-9 md:row-start-1 order-1 md:order-2">
-            <div className="relative mx-auto md:ml-auto md:mr-0 w-full max-w-[300px] md:max-w-[320px] aspect-[3/4] overflow-hidden rounded-xl md:mt-4">
+          {/* Photo — right side */}
+          <div className="md:col-span-5 md:col-start-8 md:row-start-1 order-1 md:order-2">
+            <div className="relative mx-auto md:ml-auto md:mr-0 w-full max-w-[380px] md:max-w-[400px] aspect-[3/4] overflow-hidden rounded-xl md:mt-4">
               <Image
                 src="/photos/about.jpg"
                 alt="Анна Малюточкина за рабочим столом"
                 fill
-                sizes="(max-width: 768px) 80vw, 320px"
+                sizes="(max-width: 768px) 85vw, 400px"
                 className="object-cover"
               />
             </div>

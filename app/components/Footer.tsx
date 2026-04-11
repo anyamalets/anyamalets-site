@@ -6,6 +6,7 @@ const contacts = [
 
 const documents = [
   { label: "Договор-оферта", href: "/offer" },
+  { label: "Информированное согласие", href: "/consent" },
   { label: "Обработка персональных данных", href: "/offer#pdn" },
 ];
 
