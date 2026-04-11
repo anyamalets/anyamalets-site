@@ -35,16 +35,17 @@ export default function ThanksPage() {
 
           <div className="mt-2 md:mt-4 pt-8 md:pt-10 border-t border-bg-beige max-w-[600px]">
             <p className="text-[15px] md:text-[16px] leading-[1.65] text-text-muted">
-              Если сейчас есть силы и&nbsp;время — можно прочитать{" "}
+              Я&nbsp;прошу вас прочитать{" "}
               <a
                 href="/consent"
                 className="text-accent hover:text-accent-dark underline underline-offset-2 decoration-accent/40 hover:decoration-accent transition-colors"
               >
                 информированное согласие
-              </a>
-              . Там я&nbsp;описываю, как строю работу и&nbsp;что будет
-              на&nbsp;первых встречах. Это необязательно, но&nbsp;поможет
-              чувствовать себя увереннее.
+              </a>{" "}
+              до&nbsp;нашей встречи. Там я&nbsp;описываю, как строю работу
+              и&nbsp;какие у&nbsp;нас правила — мне важно, чтобы вы
+              знали об&nbsp;этом заранее. Если останутся вопросы —
+              обсудим на&nbsp;встрече.
             </p>
           </div>
 
