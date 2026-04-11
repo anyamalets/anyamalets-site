@@ -50,6 +50,7 @@ export default function Header() {
           {/* CTA — appears on scroll */}
           <a
             href="#zapis"
+            data-ym-goal="click_zapis_button"
             aria-hidden={!showCta}
             tabIndex={showCta ? 0 : -1}
             className={`inline-flex items-center justify-center rounded-lg bg-accent px-4 md:px-5 py-2 md:py-2.5 text-[14px] md:text-[15px] font-medium text-bg transition-all duration-300 hover:bg-accent-dark ${

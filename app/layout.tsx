@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto, Open_Sans } from "next/font/google";
 import "./globals.css";
 import YandexMetrika from "./components/YandexMetrika";
+import YandexMetrikaTracker from "./components/YandexMetrikaTracker";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -59,6 +60,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <YandexMetrika />
+        <YandexMetrikaTracker />
       </body>
     </html>
   );

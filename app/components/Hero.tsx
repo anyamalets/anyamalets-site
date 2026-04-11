@@ -42,6 +42,7 @@ export default function Hero() {
             <div className="mt-8 md:mt-10">
               <a
                 href="#zapis"
+                data-ym-goal="click_zapis_button"
                 className="inline-flex items-center justify-center rounded-lg bg-accent px-7 py-4 text-base md:text-lg font-medium text-bg transition-colors hover:bg-accent-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
               >
                 Записаться на встречу
