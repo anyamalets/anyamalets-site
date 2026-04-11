@@ -29,46 +29,11 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Steps before widget */}
-        <ol className="mt-12 md:mt-16 mx-auto max-w-[560px] flex flex-col gap-5 md:gap-6">
-          {[
-            {
-              n: "1",
-              text: (
-                <>Выберите удобное время в&nbsp;календаре ниже</>
-              ),
-            },
-            {
-              n: "2",
-              text: (
-                <>
-                  Я&nbsp;отвечу в&nbsp;Telegram в&nbsp;течение суток —
-                  подтвержу встречу и&nbsp;пришлю ссылку для оплаты
-                </>
-              ),
-            },
-            {
-              n: "3",
-              text: (
-                <>
-                  Накануне пришлю ссылку на&nbsp;встречу в&nbsp;Яндекс.Телемост
-                </>
-              ),
-            },
-          ].map((step) => (
-            <li key={step.n} className="flex items-baseline gap-4">
-              <span
-                aria-hidden="true"
-                className="flex-none font-heading text-accent text-[16px] md:text-[17px] font-medium tabular-nums"
-              >
-                {step.n}.
-              </span>
-              <p className="text-[16px] md:text-[17px] leading-[1.6] text-text">
-                {step.text}
-              </p>
-            </li>
-          ))}
-        </ol>
+        {/* Note under price card */}
+        <p className="mt-8 md:mt-10 mx-auto max-w-[520px] text-center text-[15px] md:text-[16px] leading-[1.6] text-text-muted">
+          После бронирования я&nbsp;отвечу в&nbsp;течение суток — подтвержу
+          встречу и&nbsp;пришлю ссылку для оплаты.
+        </p>
 
         {/* Planerka widget */}
         <div className="mt-12 md:mt-16">

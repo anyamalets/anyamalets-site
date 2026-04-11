@@ -22,9 +22,9 @@ export default function ThanksPage() {
 
           <div className="flex flex-col gap-5 text-[17px] md:text-[18px] leading-[1.65] text-text max-w-[600px]">
             <p>
-              Я&nbsp;получила вашу заявку. В&nbsp;течение суток напишу вам
-              в&nbsp;Telegram — подтвержу встречу и&nbsp;пришлю ссылку
-              для&nbsp;оплаты.
+              Я&nbsp;получила вашу заявку. В&nbsp;течение суток отвечу вам
+              по&nbsp;указанному вами каналу связи — подтвержу встречу
+              и&nbsp;пришлю ссылку для&nbsp;оплаты.
             </p>
             <p>
               Накануне встречи пришлю ссылку на&nbsp;Яндекс.Телемост. Заранее
