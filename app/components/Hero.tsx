@@ -34,8 +34,8 @@ export default function Hero() {
             <p className="mt-6 md:mt-8 max-w-[560px] text-lg md:text-xl leading-[1.55] text-text">
               Меня зовут{" "}
               <span className="whitespace-nowrap">Анна Малюточкина</span>,
-              я&nbsp;психолог. Помогаю женщинам восстановить спокойные
-              отношения с&nbsp;едой и&nbsp;своим телом — без диет, контроля
+              я&nbsp;психолог. Помогаю восстановить спокойные отношения
+              с&nbsp;едой и&nbsp;своим телом — без диет, контроля
               и&nbsp;силы воли.
             </p>
 
