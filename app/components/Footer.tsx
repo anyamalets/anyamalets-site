@@ -1,5 +1,10 @@
 const contacts = [
   { label: "Telegram", value: "@anya_malets", href: "https://t.me/anya_malets" },
+  {
+    label: "Канал",
+    value: "«Разрешаю себе жить себя»",
+    href: "https://t.me/razreshayu_sebe_zhit",
+  },
   { label: "VK", value: "anya.malets", href: "https://vk.com/anya.malets" },
   { label: "Email", value: "psy@anyamalets.ru", href: "mailto:psy@anyamalets.ru" },
 ];
