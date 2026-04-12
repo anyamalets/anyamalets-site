@@ -14,8 +14,7 @@ export default function About() {
             <div className="mt-6 md:mt-8 flex flex-col gap-6 text-[16px] md:text-[17px] leading-[1.7] text-text max-w-[600px]">
               <p>
                 За&nbsp;годы работы с&nbsp;расстройствами пищевого поведения
-                я&nbsp;увидела, что это одна из&nbsp;самых одиноких
-                и&nbsp;стыдных тем. Часто вы&nbsp;приходите
+                я&nbsp;увидела, что это одна из&nbsp;самых стыдных тем. Часто вы&nbsp;приходите
                 с&nbsp;убеждением, что «сами виноваты» и&nbsp;должны
                 справиться своими силами.
               </p>
