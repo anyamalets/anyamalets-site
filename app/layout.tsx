@@ -41,6 +41,9 @@ export const metadata: Metadata = {
     description:
       "Терапия РПП в доказательном подходе — КПТ, ACT, DBT.",
   },
+  alternates: {
+    canonical: "https://anyamalets.ru",
+  },
   robots: {
     index: true,
     follow: true,

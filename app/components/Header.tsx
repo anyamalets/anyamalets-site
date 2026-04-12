@@ -25,14 +25,23 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full bg-bg/85 backdrop-blur-md border-b border-bg-beige/60">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo / Name */}
-          <a
-            href="#top"
-            className="font-heading text-[16px] md:text-[18px] font-medium text-text hover:text-accent transition-colors"
-          >
-            Анна Малюточкина
-          </a>
+        <div className="flex items-center justify-between gap-4 h-16 md:h-20">
+          {/* Logo / Name + Mobile Blog link */}
+          <div className="flex items-center gap-5 md:gap-6">
+            <a
+              href="/"
+              className="font-heading text-[16px] md:text-[18px] font-medium text-text hover:text-accent transition-colors"
+            >
+              Анна Малюточкина
+            </a>
+            {/* Blog link visible on mobile too */}
+            <a
+              href="/articles"
+              className="lg:hidden text-[14px] text-text hover:text-accent transition-colors"
+            >
+              Блог
+            </a>
+          </div>
 
           {/* Desktop nav */}
           <nav className="hidden lg:flex items-center gap-8">

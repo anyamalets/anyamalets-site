@@ -40,9 +40,42 @@ export async function generateMetadata({
   const post = await client.fetch<Post | null>(POST_QUERY, { slug });
   if (!post) return { title: "Статья не найдена" };
 
+  const url = `https://anyamalets.ru/articles/${post.slug.current}`;
+  const coverImageUrl = post.coverImage?.asset
+    ? urlFor(post.coverImage).width(1200).height(630).fit("crop").quality(85).url()
+    : undefined;
+
   return {
     title: post.title,
     description: post.lead || undefined,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: post.title,
+      description: post.lead || undefined,
+      url,
+      type: "article",
+      publishedTime: post.publishedAt || undefined,
+      authors: ["Анна Малюточкина"],
+      siteName: "anyamalets.ru",
+      locale: "ru_RU",
+      ...(coverImageUrl && {
+        images: [
+          {
+            url: coverImageUrl,
+            width: 1200,
+            height: 630,
+            alt: post.coverImage?.alt || post.title,
+          },
+        ],
+      }),
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.lead || undefined,
+    },
   };
 }
 
@@ -56,8 +89,32 @@ export default async function ArticlePage({
 
   if (!post) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: post.title,
+    description: post.lead || undefined,
+    datePublished: post.publishedAt || undefined,
+    author: {
+      "@type": "Person",
+      name: "Анна Малюточкина",
+      url: "https://anyamalets.ru",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Анна Малюточкина",
+      url: "https://anyamalets.ru",
+    },
+    url: `https://anyamalets.ru/articles/${slug}`,
+    mainEntityOfPage: `https://anyamalets.ru/articles/${slug}`,
+  };
+
   return (
     <main className="bg-bg text-text">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-[820px] px-6 md:px-10 py-16 md:py-24">
         <header>
           <Link
