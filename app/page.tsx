@@ -16,17 +16,18 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div id="top" />
-      <Hero />
-      <Recognize />
-      <Methods />
-      <Changes />
-      <Boundaries />
-      <About />
-      <Education />
-      <FirstSession />
-      <Faq />
-      <Pricing />
+      <main id="top">
+        <Hero />
+        <Recognize />
+        <Methods />
+        <Changes />
+        <Boundaries />
+        <About />
+        <Education />
+        <FirstSession />
+        <Faq />
+        <Pricing />
+      </main>
       <Footer />
       <StickyMobileCTA />
     </>

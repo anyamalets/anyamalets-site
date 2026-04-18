@@ -1,4 +1,4 @@
-import Script from "next/script";
+import PlanerkaEmbed from "./PlanerkaEmbed";
 
 export default function Pricing() {
   return (
@@ -35,24 +35,9 @@ export default function Pricing() {
           встречу и&nbsp;пришлю ссылку для оплаты.
         </p>
 
-        {/* Planerka widget */}
+        {/* Planerka widget — loaded lazily when the user approaches this section */}
         <div className="mt-12 md:mt-16">
-          <div
-            className="app-planerka-embed rounded-xl overflow-hidden bg-bg"
-            data-planerka-embed="default"
-            data-planerka-url="https://planerka.app/meet"
-            data-planerka-user="anyamalets"
-            data-planerka-event="50min-session"
-            data-planerka-bg="transparent"
-            data-planerka-border="#C4654A"
-            data-planerka-hide-branding="1"
-            data-planerka-shadow="none"
-            style={{ width: "100%", minHeight: "600px" }}
-          />
-          <Script
-            src="https://planerka.app/meet/assets/external/embed.js"
-            strategy="afterInteractive"
-          />
+          <PlanerkaEmbed />
         </div>
       </div>
     </section>
