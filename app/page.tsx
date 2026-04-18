@@ -10,6 +10,7 @@ import FirstSession from "./components/FirstSession";
 import Faq from "./components/Faq";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
+import StickyMobileCTA from "./components/StickyMobileCTA";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
       <Faq />
       <Pricing />
       <Footer />
+      <StickyMobileCTA />
     </>
   );
 }
