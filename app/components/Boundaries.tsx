@@ -34,17 +34,14 @@ export default function Boundaries() {
 
         <ul className="mt-14 md:mt-20 max-w-[900px] grid grid-cols-1 md:grid-cols-2 gap-x-10 md:gap-x-14 gap-y-10 md:gap-y-12">
           {items.map((item) => (
-            <li key={item.title} className="flex flex-col">
-              <div className="flex items-start gap-3 md:gap-4">
-                <span
-                  aria-hidden="true"
-                  className="mt-2 md:mt-2.5 inline-block h-[2px] w-5 md:w-6 shrink-0 bg-accent"
-                />
-                <h3 className="text-[19px] md:text-[21px] font-medium text-text leading-tight">
-                  {item.title}
-                </h3>
-              </div>
-              <p className="mt-3 md:mt-4 pl-8 md:pl-10 text-[16px] md:text-[17px] leading-[1.65] text-text">
+            <li
+              key={item.title}
+              className="flex flex-col border-l border-olive pl-5 md:pl-6"
+            >
+              <h3 className="text-[19px] md:text-[21px] font-medium text-olive leading-tight">
+                {item.title}
+              </h3>
+              <p className="mt-3 md:mt-4 text-[16px] md:text-[17px] leading-[1.65] text-text">
                 {item.text}
               </p>
             </li>
