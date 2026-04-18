@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 const methods = [
   {
     tag: "КПТ",
@@ -34,25 +36,27 @@ export default function Methods() {
         </h2>
 
         <div className="mt-14 md:mt-20 grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-12">
-          {methods.map((m) => (
-            <article key={m.tag} className="flex flex-col">
-              <div className="flex items-center gap-4 mb-6 md:mb-7">
-                <span className="inline-flex items-center rounded-md bg-bg-soft px-2.5 py-1 font-heading text-[13px] md:text-[14px] font-medium tracking-wide text-accent">
-                  {m.tag}
-                </span>
-                <span className="text-[12px] md:text-[13px] text-text-muted leading-tight">
-                  {m.full}
-                </span>
-              </div>
+          {methods.map((m, idx) => (
+            <FadeIn key={m.tag} delay={idx * 120}>
+              <article className="flex flex-col">
+                <div className="flex items-center gap-4 mb-6 md:mb-7">
+                  <span className="inline-flex items-center rounded-md bg-bg-soft px-2.5 py-1 font-heading text-[13px] md:text-[14px] font-medium tracking-wide text-accent">
+                    {m.tag}
+                  </span>
+                  <span className="text-[12px] md:text-[13px] text-text-muted leading-tight">
+                    {m.full}
+                  </span>
+                </div>
 
-              <h3 className="text-[22px] md:text-[24px] font-medium text-text leading-tight">
-                {m.title}
-              </h3>
+                <h3 className="text-[22px] md:text-[24px] font-medium text-text leading-tight">
+                  {m.title}
+                </h3>
 
-              <p className="mt-5 md:mt-6 text-[16px] md:text-[17px] leading-[1.65] text-text">
-                {m.text}
-              </p>
-            </article>
+                <p className="mt-5 md:mt-6 text-[16px] md:text-[17px] leading-[1.65] text-text">
+                  {m.text}
+                </p>
+              </article>
+            </FadeIn>
           ))}
         </div>
       </div>

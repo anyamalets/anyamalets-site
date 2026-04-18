@@ -1,3 +1,5 @@
+import FadeIn from "./FadeIn";
+
 const cards = [
   {
     title: "Срывы по вечерам",
@@ -34,22 +36,21 @@ export default function Recognize() {
         </p>
 
         <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
-          {cards.map((card) => (
-            <article
-              key={card.title}
-              className="rounded-xl bg-bg p-7 md:p-8 lg:p-9 flex flex-col gap-3 md:gap-4"
-            >
-              <h3 className="text-[20px] md:text-[22px] font-medium text-accent leading-tight flex items-center gap-3">
-                <span
-                  aria-hidden="true"
-                  className="inline-block h-[2px] w-6 bg-accent"
-                />
-                {card.title}
-              </h3>
-              <p className="text-[16px] md:text-[17px] leading-[1.65] text-text">
-                {card.text}
-              </p>
-            </article>
+          {cards.map((card, idx) => (
+            <FadeIn key={card.title} delay={idx * 120}>
+              <article className="h-full rounded-xl bg-bg p-7 md:p-8 lg:p-9 flex flex-col gap-3 md:gap-4">
+                <h3 className="text-[20px] md:text-[22px] font-medium text-accent leading-tight flex items-center gap-3">
+                  <span
+                    aria-hidden="true"
+                    className="inline-block h-[2px] w-6 bg-accent"
+                  />
+                  {card.title}
+                </h3>
+                <p className="text-[16px] md:text-[17px] leading-[1.65] text-text">
+                  {card.text}
+                </p>
+              </article>
+            </FadeIn>
           ))}
         </div>
       </div>
