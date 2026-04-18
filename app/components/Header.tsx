@@ -58,13 +58,13 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            {/* CTA — appears on scroll */}
+            {/* Desktop CTA — appears on scroll. On mobile, the floating StickyMobileCTA handles this instead. */}
             <a
               href="#zapis"
               data-ym-goal="click_zapis_button"
               aria-hidden={!showCta}
               tabIndex={showCta ? 0 : -1}
-              className={`inline-flex items-center justify-center rounded-lg bg-accent px-4 md:px-5 py-2 md:py-2.5 text-[14px] md:text-[15px] font-medium text-bg transition-all duration-300 hover:bg-accent-dark ${
+              className={`hidden lg:inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-[15px] font-medium text-bg transition-all duration-300 hover:bg-accent-dark ${
                 showCta
                   ? "opacity-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 -translate-y-1 pointer-events-none"

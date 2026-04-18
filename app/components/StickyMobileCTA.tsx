@@ -3,16 +3,30 @@
 import { useEffect, useState } from "react";
 
 export default function StickyMobileCTA() {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const [isPricingVisible, setIsPricingVisible] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
-      setIsVisible(window.scrollY > 800);
+      setIsScrolled(window.scrollY > 800);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    const pricing = document.getElementById("zapis");
+    if (!pricing) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setIsPricingVisible(entry.isIntersecting),
+      { rootMargin: "0px 0px -20% 0px" },
+    );
+    observer.observe(pricing);
+    return () => observer.disconnect();
+  }, []);
+
+  const isVisible = isScrolled && !isPricingVisible;
 
   return (
     <div
