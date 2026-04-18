@@ -50,7 +50,7 @@ export default function Header() {
               <a
                 key={link.href}
                 href={link.href}
-                className="text-[15px] text-text hover:text-accent transition-colors"
+                className="link-underline text-[15px] text-text hover:text-accent transition-colors"
               >
                 {link.label}
               </a>

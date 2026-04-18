@@ -102,7 +102,7 @@ export default function Footer() {
                     <span className="text-bg/50 group-hover:text-accent transition-colors">
                       <ContactIcon name={c.icon} />
                     </span>
-                    <span>{c.value}</span>
+                    <span className="link-underline">{c.value}</span>
                   </a>
                 </li>
               ))}
@@ -119,7 +119,7 @@ export default function Footer() {
                 <li key={d.label}>
                   <a
                     href={d.href}
-                    className="text-[15px] md:text-[16px] text-bg hover:text-accent transition-colors"
+                    className="link-underline text-[15px] md:text-[16px] text-bg hover:text-accent transition-colors"
                   >
                     {d.label}
                   </a>
