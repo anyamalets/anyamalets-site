@@ -11,6 +11,7 @@ type Post = {
   title: string;
   slug: { current: string };
   publishedAt: string;
+  _updatedAt: string;
   lead: string | null;
   body: PortableTextBlock[];
   coverImage: {
@@ -24,6 +25,7 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {
   title,
   slug,
   publishedAt,
+  _updatedAt,
   lead,
   body,
   coverImage
@@ -89,12 +91,20 @@ export default async function ArticlePage({
 
   if (!post) notFound();
 
+  const articleUrl = `https://anyamalets.ru/articles/${slug}`;
+  const imageUrl = post.coverImage?.asset
+    ? urlFor(post.coverImage).width(1200).height(630).fit("crop").quality(85).url()
+    : undefined;
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
     headline: post.title,
     description: post.lead || undefined,
+    image: imageUrl,
     datePublished: post.publishedAt || undefined,
+    dateModified: post._updatedAt || post.publishedAt || undefined,
+    inLanguage: "ru",
     author: {
       "@type": "Person",
       name: "Анна Малюточкина",
@@ -105,8 +115,8 @@ export default async function ArticlePage({
       name: "Анна Малюточкина",
       url: "https://anyamalets.ru",
     },
-    url: `https://anyamalets.ru/articles/${slug}`,
-    mainEntityOfPage: `https://anyamalets.ru/articles/${slug}`,
+    url: articleUrl,
+    mainEntityOfPage: articleUrl,
   };
 
   return (
