@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function ThanksPage() {
   return (
-    <main className="bg-bg text-text min-h-[85vh] flex items-center">
+    <main id="main-content" className="bg-bg text-text min-h-[85vh] flex items-center">
       <div className="mx-auto max-w-[720px] w-full px-6 md:px-10 py-16 md:py-24">
         <div className="flex flex-col gap-8 md:gap-10">
           <div className="flex flex-col gap-5 md:gap-6">

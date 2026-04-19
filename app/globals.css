@@ -24,6 +24,12 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), system-ui, -apple-system, sans-serif;
 }
 
+/* Selection color — brand-consistent instead of the default browser blue. */
+::selection {
+  background-color: #E8DFD3;
+  color: #8F4531;
+}
+
 /* Underline-grow: the underline expands from left to right on hover/focus. */
 .link-underline {
   position: relative;

@@ -30,7 +30,7 @@ export default async function ArticlesPage() {
   const posts = await client.fetch<Post[]>(POSTS_QUERY);
 
   return (
-    <main className="bg-bg text-text">
+    <main id="main-content" className="bg-bg text-text">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-16 md:py-24">
         <header>
           <a

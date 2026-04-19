@@ -61,6 +61,12 @@ export default function RootLayout({
       className={`${roboto.variable} ${openSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="absolute left-2 -top-[999px] z-[100] px-4 py-3 rounded-lg bg-accent text-bg text-[15px] font-medium shadow-md focus-visible:top-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent-dark focus-visible:outline-offset-2"
+        >
+          Перейти к содержанию
+        </a>
         {children}
         <YandexMetrika />
         <YandexMetrikaTracker />

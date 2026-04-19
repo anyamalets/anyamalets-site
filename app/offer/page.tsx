@@ -45,7 +45,7 @@ function List({ children }: { children: React.ReactNode }) {
 
 export default function OfferPage() {
   return (
-    <main className="bg-bg text-text">
+    <main id="main-content" className="bg-bg text-text">
       <div className="mx-auto max-w-[820px] px-6 md:px-10 py-16 md:py-24">
         {/* Header */}
         <header>

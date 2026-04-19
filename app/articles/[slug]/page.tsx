@@ -110,7 +110,7 @@ export default async function ArticlePage({
   };
 
   return (
-    <main className="bg-bg text-text">
+    <main id="main-content" className="bg-bg text-text">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
