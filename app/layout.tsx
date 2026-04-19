@@ -3,6 +3,7 @@ import { Roboto, Open_Sans } from "next/font/google";
 import "./globals.css";
 import YandexMetrika from "./components/YandexMetrika";
 import YandexMetrikaTracker from "./components/YandexMetrikaTracker";
+import CookieConsent from "./components/CookieConsent";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -70,6 +71,7 @@ export default function RootLayout({
         {children}
         <YandexMetrika />
         <YandexMetrikaTracker />
+        <CookieConsent />
       </body>
     </html>
   );

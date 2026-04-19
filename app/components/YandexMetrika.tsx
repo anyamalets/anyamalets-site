@@ -1,10 +1,36 @@
+"use client";
+
 import Script from "next/script";
+import { useEffect, useState } from "react";
 
 const COUNTER_ID = 98268873;
+const STORAGE_KEY = "cookie-consent";
+const EVENT_NAME = "cookie-consent-change";
 
 export default function YandexMetrika() {
-  // Only load in production — local dev should not pollute stats
-  if (process.env.NODE_ENV !== "production") return null;
+  const [accepted, setAccepted] = useState(false);
+
+  useEffect(() => {
+    // Skip in dev — local traffic shouldn't pollute stats
+    if (process.env.NODE_ENV !== "production") return;
+
+    try {
+      if (localStorage.getItem(STORAGE_KEY) === "accepted") {
+        setAccepted(true);
+      }
+    } catch {
+      // ignore
+    }
+
+    const onChange = (e: Event) => {
+      const detail = (e as CustomEvent<string>).detail;
+      if (detail === "accepted") setAccepted(true);
+    };
+    window.addEventListener(EVENT_NAME, onChange);
+    return () => window.removeEventListener(EVENT_NAME, onChange);
+  }, []);
+
+  if (!accepted) return null;
 
   return (
     <>
