@@ -1,6 +1,6 @@
-type Item = { q: string; a: string };
+export type FaqItem = { q: string; a: string };
 
-const items: Item[] = [
+export const faqItems: FaqItem[] = [
   {
     q: "У меня нет диагноза — вы работаете с таким?",
     a: "Да. Диагноз не нужен, чтобы начать работать. Если еда и тело занимают слишком много места в вашей жизни — этого достаточно, чтобы прийти.",
@@ -42,7 +42,7 @@ export default function Faq() {
         </div>
 
         <div className="mt-12 md:mt-16 max-w-[900px] flex flex-col gap-3 md:gap-4">
-          {items.map((item, idx) => (
+          {faqItems.map((item, idx) => (
             <details
               key={idx}
               className="group rounded-xl border border-bg-beige bg-bg-soft/60 open:bg-bg-soft transition-colors"
