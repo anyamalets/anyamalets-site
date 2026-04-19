@@ -13,6 +13,7 @@ export default function Hero() {
                 alt="Анна Малюточкина, психолог"
                 fill
                 priority
+                fetchPriority="high"
                 sizes="(max-width: 768px) 90vw, (max-width: 1200px) 40vw, 480px"
                 className="object-cover"
               />

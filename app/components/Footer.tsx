@@ -96,7 +96,6 @@ export default function Footer() {
                     rel={
                       c.href.startsWith("http") ? "noopener noreferrer" : undefined
                     }
-                    aria-label={c.label}
                     className="inline-flex items-center gap-2.5 text-[15px] md:text-[16px] text-bg hover:text-accent transition-colors group"
                   >
                     <span className="text-bg/50 group-hover:text-accent transition-colors">
