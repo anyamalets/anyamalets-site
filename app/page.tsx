@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import Recognize from "./components/Recognize";
 import Methods from "./components/Methods";
 import Changes from "./components/Changes";
+import Testimonials from "./components/Testimonials";
 import Boundaries from "./components/Boundaries";
 import About from "./components/About";
 import Education from "./components/Education";
@@ -114,6 +115,7 @@ export default function Home() {
         <Recognize />
         <Methods />
         <Changes />
+        <Testimonials />
         <Boundaries />
         <About />
         <Education />
