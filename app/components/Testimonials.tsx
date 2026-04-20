@@ -118,7 +118,7 @@ export default function Testimonials() {
               <div className="flex md:hidden items-center justify-center gap-6">
                 <button
                   onClick={prev}
-                  className="p-3 hover:bg-accent/10 rounded-lg transition-colors"
+                  className="p-3 hover:bg-accent/10 rounded-lg transition-colors flex-shrink-0"
                   aria-label="Previous quote"
                 >
                   <svg
@@ -135,12 +135,12 @@ export default function Testimonials() {
                 </button>
 
                 {/* Dots indicator */}
-                <div className="flex gap-3">
+                <div className="flex gap-3 w-[140px] justify-center">
                   {quotes.map((_, idx) => (
                     <button
                       key={idx}
                       onClick={() => setCurrent(idx)}
-                      className={`rounded-full transition-all ${
+                      className={`rounded-full transition-all flex-shrink-0 ${
                         idx === current ? 'w-10 h-3 bg-accent' : 'w-3 h-3 bg-accent/30'
                       }`}
                       aria-label={`Go to quote ${idx + 1}`}
@@ -150,7 +150,7 @@ export default function Testimonials() {
 
                 <button
                   onClick={next}
-                  className="p-3 hover:bg-accent/10 rounded-lg transition-colors"
+                  className="p-3 hover:bg-accent/10 rounded-lg transition-colors flex-shrink-0"
                   aria-label="Next quote"
                 >
                   <svg
