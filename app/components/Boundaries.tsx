@@ -36,9 +36,10 @@ export default function Boundaries() {
           {items.map((item) => (
             <li
               key={item.title}
-              className="flex flex-col border-l border-olive pl-5 md:pl-6"
+              className="flex flex-col pl-5 md:pl-6"
+              style={{ borderLeft: "1px solid #6E7A81" }}
             >
-              <h3 className="text-[19px] md:text-[21px] font-medium text-olive leading-tight">
+              <h3 className="text-[19px] md:text-[21px] font-medium leading-tight" style={{ color: "#6E7A81" }}>
                 {item.title}
               </h3>
               <p className="mt-3 md:mt-4 text-[16px] md:text-[17px] leading-[1.65] text-text">

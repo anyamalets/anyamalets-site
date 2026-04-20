@@ -2,13 +2,15 @@
 
 @theme inline {
   --color-bg: #FAFAFA;
-  --color-bg-soft: #F5EFE6;
+  --color-bg-soft: #D2C1AF;
   --color-bg-beige: #E8DFD3;
-  --color-accent: #A04E38;
-  --color-accent-dark: #8F4531;
-  --color-text: #2B2B2B;
+  --color-accent: #A96F5B;
+  --color-accent-dark: #8F5A48;
+  --color-text: #2C2C2C;
   --color-text-muted: #6B6B6B;
-  --color-olive: #4C6444;
+  --color-olive: #92A58F;
+  --color-charcoal: #6E7A81;
+  --color-mustard: #B9A171;
 
   --font-heading: var(--font-roboto);
   --font-body: var(--font-open-sans);
@@ -69,4 +71,36 @@ h1, h2, h3, h4, h5, h6 {
 }
 @media (prefers-reduced-motion: reduce) {
   .link-underline::after { transition: none; }
+}
+
+/* Watercolor wash — soft botanical background accent with subtle gradient overlay. */
+.watercolor-wash::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.12;
+  background: radial-gradient(
+    circle at 20% 30%,
+    rgba(76, 100, 68, 0.3) 0%,
+    rgba(76, 100, 68, 0.1) 40%,
+    transparent 70%
+  ),
+  radial-gradient(
+    circle at 80% 70%,
+    rgba(232, 223, 211, 0.25) 0%,
+    transparent 60%
+  );
+  mix-blend-mode: multiply;
+  border-radius: inherit;
+}
+
+/* Botanical corner — positions decorative SVG in corner of relative container. */
+.botanical-corner {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: var(--color-olive);
+  opacity: 0.2;
+  pointer-events: none;
 }

@@ -66,7 +66,8 @@ export default function PlanerkaEmbed() {
       data-planerka-user="anyamalets"
       data-planerka-event="50min-session"
       data-planerka-bg="transparent"
-      data-planerka-border="#A04E38"
+      data-planerka-border="#8B9B8F"
+      data-planerka-button="#8B9B8F"
       data-planerka-hide-branding="1"
       data-planerka-shadow="none"
       style={{ width: "100%", minHeight: "600px" }}

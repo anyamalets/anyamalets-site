@@ -40,7 +40,7 @@ export default function Methods() {
             <FadeIn key={m.tag} delay={idx * 120}>
               <article className="flex flex-col">
                 <div className="flex items-center gap-4 mb-6 md:mb-7">
-                  <span className="inline-flex items-center rounded-md bg-bg-soft px-2.5 py-1 font-heading text-[13px] md:text-[14px] font-medium tracking-wide text-accent">
+                  <span className="inline-flex items-center rounded-md px-2.5 py-1 font-heading text-[13px] md:text-[14px] font-medium tracking-wide" style={{ backgroundColor: "rgba(185, 161, 113, 0.2)", color: "#6E7A81" }}>
                     {m.tag}
                   </span>
                   <span className="text-[12px] md:text-[13px] text-text-muted leading-tight">

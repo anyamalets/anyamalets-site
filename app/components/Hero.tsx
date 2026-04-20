@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="relative w-full bg-bg">
-      <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14">
+    <section className="relative w-full bg-bg overflow-hidden">
+      <div className="mx-auto max-w-[1200px] relative px-6 md:px-10 lg:px-14">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center py-16 md:py-24 lg:py-28">
           {/* Photo — second on mobile, first on desktop */}
           <div className="md:col-span-5 lg:col-span-5 order-2 md:order-1">
@@ -27,9 +27,9 @@ export default function Hero() {
             </p>
 
             <h1 className="text-[32px] leading-[1.1] sm:text-[44px] md:text-[52px] lg:text-[60px] font-semibold text-text tracking-tight">
-              Устали от цикла
+              Вернуть доверие
               <br />
-              <span className="text-accent">диета — срыв — вина?</span>
+              <span className="text-accent">к себе</span>
             </h1>
 
             <p className="mt-6 md:mt-8 max-w-[560px] text-lg md:text-xl leading-[1.55] text-text">
