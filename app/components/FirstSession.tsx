@@ -51,7 +51,7 @@ export default function FirstSession() {
               className="grid grid-cols-1 md:grid-cols-[200px_1fr] gap-2 md:gap-10 py-7 md:py-9 border-t border-bg-beige last:border-b"
             >
               <div className="flex md:block">
-                <span className="font-heading text-[12px] md:text-[13px] uppercase tracking-[0.14em] text-accent font-medium">
+                <span className="font-heading text-[12px] md:text-[13px] uppercase tracking-[0.14em] font-medium" style={{ color: "#6E7A81" }}>
                   {s.phase}
                 </span>
               </div>

@@ -42,7 +42,11 @@ export default function Changes() {
           {items.map((item) => (
             <li
               key={item.title}
-              className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-2 md:gap-10 py-7 md:py-9 border-t border-bg-beige last:border-b"
+              className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-2 md:gap-10 py-7 md:py-9 last:border-b"
+              style={{
+                borderTop: "1px solid rgba(110, 122, 129, 0.2)",
+                borderBottom: "1px solid rgba(110, 122, 129, 0.2)"
+              }}
             >
               <div className="flex flex-col">
                 <h3 className="text-[19px] md:text-[22px] font-medium text-text leading-tight">
