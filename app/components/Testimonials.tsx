@@ -57,7 +57,7 @@ export default function Testimonials() {
           </h2>
 
           {/* Quotes carousel */}
-          <div className="relative flex items-center justify-center gap-4 md:gap-8 lg:gap-12">
+          <div className="relative flex items-center justify-center gap-4 md:gap-8 lg:gap-12 min-h-[520px] md:min-h-auto">
             {/* Left arrow */}
             <button
               onClick={prev}
