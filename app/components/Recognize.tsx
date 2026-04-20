@@ -22,7 +22,7 @@ export default function Recognize() {
   return (
     <section
       id="recognize"
-      className="relative w-full bg-bg-soft scroll-mt-24"
+      className="relative w-full bg-bg-beige scroll-mt-24"
     >
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-20 md:py-28 lg:py-32">
         <h2 className="text-center text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15]">

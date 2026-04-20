@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="relative w-full bg-bg-soft scroll-mt-24">
+    <section id="about" className="relative w-full bg-bg-beige scroll-mt-24">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 py-28 md:py-36 lg:py-44">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-14 items-center">
           {/* Text — first on desktop */}
