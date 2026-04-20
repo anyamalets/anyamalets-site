@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 const quotes = [
   {
@@ -26,6 +26,11 @@ export default function Testimonials() {
 
   const next = () => setCurrent((current + 1) % quotes.length);
   const prev = () => setCurrent((current - 1 + quotes.length) % quotes.length);
+
+  useEffect(() => {
+    const interval = setInterval(next, 7000);
+    return () => clearInterval(interval);
+  }, [current]);
 
   return (
     <section
