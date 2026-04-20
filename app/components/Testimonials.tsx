@@ -101,7 +101,7 @@ export default function Testimonials() {
 
               {/* Quote text - fixed height to prevent layout shift */}
               <h3
-                className="text-[20px] md:text-[24px] lg:text-[26px] font-medium text-text leading-[1.6] mb-8 flex items-center justify-center min-h-[200px] md:min-h-[260px] lg:min-h-[320px]"
+                className="text-[20px] md:text-[24px] lg:text-[26px] font-medium text-text leading-[1.6] mb-8 flex items-center justify-center min-h-[280px] md:min-h-[280px] lg:min-h-[320px]"
               >
                 "{quotes[current].text}"
               </h3>
