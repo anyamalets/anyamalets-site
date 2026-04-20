@@ -81,7 +81,10 @@ export default function Testimonials() {
               </div>
 
               {/* Quote text - fixed height to prevent layout shift */}
-              <h3 className="text-[20px] md:text-[24px] lg:text-[26px] font-medium text-text leading-[1.6] mb-8 min-h-[140px] md:min-h-[120px] flex items-center justify-center">
+              <h3
+                className="text-[20px] md:text-[24px] lg:text-[26px] font-medium text-text leading-[1.6] mb-8 flex items-center justify-center"
+                style={{ minHeight: '140px' }}
+              >
                 "{quotes[current].text}"
               </h3>
 
