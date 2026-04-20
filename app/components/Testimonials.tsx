@@ -57,7 +57,7 @@ export default function Testimonials() {
           </h2>
 
           {/* Quotes carousel */}
-          <div className="relative flex items-center justify-center gap-4 md:gap-8 lg:gap-12 min-h-[520px] md:min-h-auto">
+          <div className="relative flex flex-col items-center justify-center gap-4 md:gap-8 lg:gap-12 min-h-screen md:min-h-auto md:flex-row">
             {/* Left arrow */}
             <button
               onClick={prev}
@@ -78,7 +78,7 @@ export default function Testimonials() {
             </button>
 
             {/* Quote content */}
-            <div className="text-center flex-1 min-h-[520px] md:min-h-auto flex flex-col self-stretch">
+            <div className="text-center flex-1 md:min-h-auto flex flex-col">
               {/* Quote content wrapper - grows to push buttons down */}
               <div className="flex-1 flex flex-col items-center justify-center">
                 {/* Quote mark */}
