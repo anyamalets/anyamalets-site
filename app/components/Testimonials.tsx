@@ -39,7 +39,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative w-full bg-bg-beige scroll-mt-24 py-20 md:py-28 lg:py-32 overflow-hidden"
+      className="relative w-full bg-bg-beige scroll-mt-24 py-20 md:py-28 lg:py-32 overflow-hidden grain-overlay"
       style={{
         backgroundImage: 'url(/photos/quote-1.jpg)',
         backgroundSize: 'cover',
