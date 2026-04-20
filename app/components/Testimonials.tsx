@@ -78,7 +78,7 @@ export default function Testimonials() {
             </button>
 
             {/* Quote content */}
-            <div className="text-center flex-1 min-h-[520px] md:min-h-auto flex flex-col">
+            <div className="text-center flex-1 min-h-[520px] md:min-h-auto flex flex-col self-stretch">
               {/* Quote content wrapper - grows to push buttons down */}
               <div className="flex-1 flex flex-col items-center justify-center">
                 {/* Quote mark */}
