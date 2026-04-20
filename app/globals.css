@@ -22,22 +22,6 @@ body {
   font-family: var(--font-body), system-ui, -apple-system, sans-serif;
 }
 
-/* Grain overlay — faint paper-like texture over the whole page. */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: 60;
-  pointer-events: none;
-  opacity: 0.4;
-  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='240' height='240'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-  mix-blend-mode: multiply;
-}
-@media (prefers-reduced-motion: reduce) {
-  /* static by default; here we just keep it consistent */
-  body::before { opacity: 0.03; }
-}
-
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading), system-ui, -apple-system, sans-serif;
 }
