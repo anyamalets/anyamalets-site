@@ -78,7 +78,7 @@ export default function Testimonials() {
             </button>
 
             {/* Quote content */}
-            <div className="text-center flex-1">
+            <div className="text-center flex-1 min-h-[450px] md:min-h-auto">
               {/* Quote mark */}
               <div className="flex justify-center mb-8 md:mb-10">
                 <svg
