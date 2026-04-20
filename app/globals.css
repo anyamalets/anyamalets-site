@@ -14,6 +14,7 @@
 
   --font-heading: var(--font-roboto);
   --font-body: var(--font-open-sans);
+  --font-script: var(--font-caveat);
 }
 
 body {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Roboto, Open_Sans } from "next/font/google";
+import { Roboto, Open_Sans, Parisienne } from "next/font/google";
 import "./globals.css";
 import YandexMetrika from "./components/YandexMetrika";
 import YandexMetrikaTracker from "./components/YandexMetrikaTracker";
@@ -16,6 +16,13 @@ const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin", "cyrillic"],
   weight: ["400", "500", "600"],
+  display: "swap",
+});
+
+const parisienne = Parisienne({
+  variable: "--font-parisienne",
+  subsets: ["latin"],
+  weight: ["400"],
   display: "swap",
 });
 
@@ -59,7 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="ru"
-      className={`${roboto.variable} ${openSans.variable} h-full antialiased`}
+      className={`${roboto.variable} ${openSans.variable} ${parisienne.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <a
