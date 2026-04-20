@@ -52,7 +52,7 @@ export default function Testimonials() {
 
       <div className="relative z-10 mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14">
         <div className="max-w-[900px] mx-auto">
-          <h2 className="text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15] mb-14 md:mb-20">
+          <h2 className="text-center text-[32px] md:text-[40px] lg:text-[44px] font-semibold text-text leading-[1.15] mb-14 md:mb-20">
             Вдохновение
           </h2>
 
