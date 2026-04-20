@@ -125,8 +125,23 @@ export default async function ArticlePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="mx-auto max-w-[820px] px-6 md:px-10 py-16 md:py-24">
-        <header>
+
+      {/* Hero header section with background image */}
+      <section
+        className="relative w-full bg-bg-beige overflow-hidden"
+        style={{
+          backgroundImage: post.coverImage?.asset
+            ? `url(${urlFor(post.coverImage).width(1600).quality(85).url()})`
+            : undefined,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundAttachment: 'fixed',
+        }}
+      >
+        {/* Overlay for better text contrast */}
+        <div className="absolute inset-0 bg-bg/80 backdrop-blur-sm"></div>
+
+        <div className="relative z-10 mx-auto max-w-[820px] px-6 md:px-10 py-20 md:py-32 lg:py-40">
           <Link
             href="/articles"
             className="inline-flex items-center gap-2 text-[14px] text-text-muted hover:text-accent transition-colors"
@@ -138,7 +153,7 @@ export default async function ArticlePage({
           {post.publishedAt && (
             <time
               dateTime={post.publishedAt}
-              className="mt-8 md:mt-10 block text-[13px] md:text-[14px] text-text-muted"
+              className="mt-6 md:mt-8 block text-[13px] md:text-[14px] text-text-muted"
             >
               {new Date(post.publishedAt).toLocaleDateString("ru-RU", {
                 day: "numeric",
@@ -148,29 +163,19 @@ export default async function ArticlePage({
             </time>
           )}
 
-          <h1 className="mt-3 md:mt-4 text-[32px] md:text-[44px] font-semibold leading-[1.1] tracking-tight">
+          <h1 className="mt-4 md:mt-6 text-[32px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.1] tracking-tight text-text">
             {post.title}
           </h1>
 
           {post.lead && (
-            <p className="mt-5 md:mt-6 text-[17px] md:text-[18px] leading-[1.6] text-text-muted max-w-[640px]">
+            <p className="mt-6 md:mt-8 text-[17px] md:text-[18px] leading-[1.65] text-text max-w-[640px]">
               {post.lead}
             </p>
           )}
-        </header>
+        </div>
+      </section>
 
-        {post.coverImage?.asset && (
-          <div className="mt-10 md:mt-12 relative w-full aspect-[16/9] overflow-hidden rounded-xl">
-            <Image
-              src={urlFor(post.coverImage).width(1600).quality(85).url()}
-              alt={post.coverImage.alt || post.title}
-              fill
-              priority
-              sizes="(max-width: 820px) 100vw, 820px"
-              className="object-cover"
-            />
-          </div>
-        )}
+      <div className="mx-auto max-w-[820px] px-6 md:px-10 py-16 md:py-24">
 
         <article className="mt-10 md:mt-14 prose-custom">
           <PortableText
