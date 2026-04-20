@@ -128,7 +128,7 @@ export default async function ArticlePage({
 
       {/* Hero header section with background image */}
       <section
-        className="relative w-full bg-bg-beige overflow-hidden"
+        className="relative w-full bg-bg-beige overflow-hidden grain-overlay"
         style={{
           backgroundImage: post.coverImage?.asset
             ? `url(${urlFor(post.coverImage).width(1600).quality(85).url()})`
