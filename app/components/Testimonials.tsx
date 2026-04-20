@@ -91,15 +91,15 @@ export default function Testimonials() {
             </div>
 
             {/* Navigation buttons */}
-            <div className="flex items-center justify-center gap-6 mt-12 md:mt-16">
+            <div className="flex items-center justify-center gap-8 md:gap-10 mt-12 md:mt-16">
               <button
                 onClick={prev}
-                className="p-2 hover:bg-accent/10 rounded-lg transition-colors"
+                className="p-3 hover:bg-accent/10 rounded-lg transition-colors"
                 aria-label="Previous quote"
               >
                 <svg
-                  width="24"
-                  height="24"
+                  width="32"
+                  height="32"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
@@ -111,13 +111,13 @@ export default function Testimonials() {
               </button>
 
               {/* Dots indicator */}
-              <div className="flex gap-2">
+              <div className="flex gap-3 md:gap-4">
                 {quotes.map((_, idx) => (
                   <button
                     key={idx}
                     onClick={() => setCurrent(idx)}
-                    className={`h-2 rounded-full transition-all ${
-                      idx === current ? 'w-8 bg-accent' : 'w-2 bg-accent/30'
+                    className={`rounded-full transition-all ${
+                      idx === current ? 'w-10 h-3 bg-accent' : 'w-3 h-3 bg-accent/30'
                     }`}
                     aria-label={`Go to quote ${idx + 1}`}
                   />
@@ -126,12 +126,12 @@ export default function Testimonials() {
 
               <button
                 onClick={next}
-                className="p-2 hover:bg-accent/10 rounded-lg transition-colors"
+                className="p-3 hover:bg-accent/10 rounded-lg transition-colors"
                 aria-label="Next quote"
               >
                 <svg
-                  width="24"
-                  height="24"
+                  width="32"
+                  height="32"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
