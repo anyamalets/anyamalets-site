@@ -78,41 +78,44 @@ export default function Testimonials() {
             </button>
 
             {/* Quote content */}
-            <div className="text-center flex-1 min-h-[520px] md:min-h-auto">
-              {/* Quote mark */}
-              <div className="flex justify-center mb-8 md:mb-10">
-                <svg
-                  width="60"
-                  height="60"
-                  viewBox="0 0 60 60"
-                  fill="none"
-                  className="text-accent"
+            <div className="text-center flex-1 min-h-[520px] md:min-h-auto flex flex-col">
+              {/* Quote content wrapper - grows to push buttons down */}
+              <div className="flex-1 flex flex-col items-center justify-center">
+                {/* Quote mark */}
+                <div className="flex justify-center mb-8 md:mb-10">
+                  <svg
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                    className="text-accent"
+                  >
+                    <path
+                      d="M12.5 20c-4.14 0-7.5 3.36-7.5 7.5v15c0 4.14 3.36 7.5 7.5 7.5h7.5v-7.5h-5V27.5c0-2.48 2.02-4.5 4.5-4.5V20z"
+                      fill="currentColor"
+                    />
+                    <path
+                      d="M42.5 20c-4.14 0-7.5 3.36-7.5 7.5v15c0 4.14 3.36 7.5 7.5 7.5h7.5v-7.5h-5V27.5c0-2.48 2.02-4.5 4.5-4.5V20z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </div>
+
+                {/* Quote text - fixed height to prevent layout shift */}
+                <h3
+                  className="text-[20px] md:text-[24px] lg:text-[26px] font-medium text-text leading-[1.6] mb-8 flex items-center justify-center min-h-[280px] md:min-h-[280px] lg:min-h-[320px]"
                 >
-                  <path
-                    d="M12.5 20c-4.14 0-7.5 3.36-7.5 7.5v15c0 4.14 3.36 7.5 7.5 7.5h7.5v-7.5h-5V27.5c0-2.48 2.02-4.5 4.5-4.5V20z"
-                    fill="currentColor"
-                  />
-                  <path
-                    d="M42.5 20c-4.14 0-7.5 3.36-7.5 7.5v15c0 4.14 3.36 7.5 7.5 7.5h7.5v-7.5h-5V27.5c0-2.48 2.02-4.5 4.5-4.5V20z"
-                    fill="currentColor"
-                  />
-                </svg>
+                  "{quotes[current].text}"
+                </h3>
+
+                {/* Author */}
+                <p className="text-[16px] md:text-[18px] font-medium text-accent tracking-wider uppercase mb-6">
+                  {quotes[current].author}
+                </p>
+
+                {/* Divider */}
+                <div className="h-1 w-16 bg-accent mx-auto mb-8 md:mb-10"></div>
               </div>
-
-              {/* Quote text - fixed height to prevent layout shift */}
-              <h3
-                className="text-[20px] md:text-[24px] lg:text-[26px] font-medium text-text leading-[1.6] mb-8 flex items-center justify-center min-h-[280px] md:min-h-[280px] lg:min-h-[320px]"
-              >
-                "{quotes[current].text}"
-              </h3>
-
-              {/* Author */}
-              <p className="text-[16px] md:text-[18px] font-medium text-accent tracking-wider uppercase mb-6">
-                {quotes[current].author}
-              </p>
-
-              {/* Divider */}
-              <div className="h-1 w-16 bg-accent mx-auto mb-8 md:mb-10"></div>
 
               {/* Navigation buttons - mobile view */}
               <div className="flex md:hidden items-center justify-center gap-6">
