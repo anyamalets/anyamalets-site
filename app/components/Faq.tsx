@@ -45,7 +45,7 @@ export default function Faq() {
           {faqItems.map((item, idx) => (
             <details
               key={idx}
-              className="group rounded-xl border border-bg-beige bg-bg-soft/60 open:bg-bg-soft transition-colors"
+              className="group rounded-xl border border-bg-beige bg-bg-soft/60 open:bg-bg transition-colors"
             >
               <summary className="flex items-center justify-between gap-5 cursor-pointer list-none px-6 md:px-8 py-5 md:py-6 rounded-xl">
                 <span className="text-[17px] md:text-[19px] font-medium text-text leading-[1.35]">
