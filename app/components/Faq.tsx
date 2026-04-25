@@ -83,12 +83,6 @@ export default function Faq() {
             <span>→</span>
           </a>
         </div>
-
-        <div className="mt-12 pt-8 border-t border-bg-beige">
-          <p className="text-sm text-text/60">
-            Под термином «психотерапия» на этом сайте подразумевается психологическое консультирование.
-          </p>
-        </div>
       </div>
     </section>
   );
