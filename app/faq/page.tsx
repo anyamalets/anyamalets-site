@@ -120,9 +120,12 @@ export default function FAQPage() {
               </a>
               <a
                 href="https://t.me/anyamalets"
-                className="inline-block px-8 py-3 bg-text/10 text-text rounded-lg font-semibold hover:bg-text/20 transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-text/10 text-text rounded-lg font-semibold hover:bg-text/20 transition-colors"
               >
-                ✈️ Написать мне
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295-.397 0-.33-.149-.465-.526l-1.063-3.282c-.04-.121-.022-.28.053-.407.075-.127.2-.19.334-.19h5.109c.231 0 .358-.124.4-.356l.266-4.172c.042-.371.176-.533.4-.533.168 0 .335.084.335.084z"/>
+                </svg>
+                Написать мне
               </a>
             </div>
           </div>
