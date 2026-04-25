@@ -108,7 +108,7 @@ export default function FAQPage() {
               Свяжитесь со мной напрямую. Я помогу разобраться в вашей ситуации.
             </p>
             <a
-              href="https://instagram.com/anyamalets"
+              href="https://t.me/anyamalets"
               className="inline-block px-8 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent/90 transition-colors"
             >
               Написать мне
