@@ -74,12 +74,13 @@ export default function Faq() {
           ))}
         </div>
 
-        <div className="mt-12 md:mt-16">
+        <div className="mt-10 md:mt-12">
           <a
             href="/faq"
-            className="inline-block px-8 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent/90 transition-colors"
+            className="inline-flex items-center gap-2 text-accent hover:text-accent/80 transition-colors font-medium"
           >
-            Смотреть все вопросы
+            Смотреть другие вопросы
+            <span>→</span>
           </a>
         </div>
       </div>
