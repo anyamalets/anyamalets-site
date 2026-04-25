@@ -114,12 +114,20 @@ export default function FAQPage() {
             <p className="text-text/70 mb-6">
               Свяжитесь со мной напрямую. Я помогу разобраться в вашей ситуации.
             </p>
-            <a
-              href="https://t.me/anyamalets"
-              className="inline-block px-8 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent/90 transition-colors"
-            >
-              Написать мне
-            </a>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a
+                href="https://planerka.app/anyamalets/50min-session"
+                className="inline-block px-8 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent/90 transition-colors"
+              >
+                Записаться на консультацию
+              </a>
+              <a
+                href="https://t.me/anyamalets"
+                className="inline-block px-8 py-3 bg-text/10 text-text rounded-lg font-semibold hover:bg-text/20 transition-colors"
+              >
+                Написать мне
+              </a>
+            </div>
           </div>
         </div>
       </div>
