@@ -5,7 +5,6 @@ import YandexMetrika from "./components/YandexMetrika";
 import YandexMetrikaTracker from "./components/YandexMetrikaTracker";
 import CookieConsent from "./components/CookieConsent";
 import SchemaScripts from "./components/SchemaScripts";
-import Footer from "./components/Footer";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -83,7 +82,6 @@ export default function RootLayout({
         <SchemaScripts />
 
         {children}
-        <Footer />
         <YandexMetrika />
         <YandexMetrikaTracker />
         <CookieConsent />
