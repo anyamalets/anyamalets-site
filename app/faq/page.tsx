@@ -79,6 +79,13 @@ export default function FAQPage() {
     <main id="main-content" className="flex-1">
       <div className="min-h-screen bg-gradient-to-b from-bg to-bg/95 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
+          {/* Back Button */}
+          <div className="mb-8">
+            <a href="/" className="inline-flex items-center text-accent hover:text-accent/80 transition-colors font-medium">
+              ← На главную
+            </a>
+          </div>
+
           {/* Header */}
           <div className="text-center mb-12">
             <h1 className="text-4xl sm:text-5xl font-bold text-text mb-4">
