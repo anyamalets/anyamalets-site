@@ -1,0 +1,23 @@
+{
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "MedicalBusiness", "ProfessionalService"],
+  "name": "Анна Малюточкина — Психолог",
+  "alternateName": "anyamalets",
+  "description": "Психолог, специализирующийся на расстройствах пищевого поведения. Использует КПТ, DBT, ACT. Онлайн и офлайн консультации.",
+  "url": "https://anyamalets.ru",
+  "image": "https://anyamalets.ru/photos/hero.jpg",
+  "serviceType": "Психотерапия расстройств пищевого поведения",
+  "areaServed": {"@type": "Country", "name": "Russia"},
+  "knowsAbout": [
+    "Расстройства пищевого поведения",
+    "Анорексия",
+    "Булимия",
+    "Когнитивно-поведенческая терапия (КПТ)",
+    "DBT (Диалектическая поведенческая терапия)",
+    "ACT (Терапия принятия и привязанности)",
+    "Эмоциональная регуляция",
+    "Семейная терапия"
+  ],
+  "availableLanguage": "ru",
+  "priceRange": "RUB"
+}
