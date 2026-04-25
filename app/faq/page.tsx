@@ -119,7 +119,7 @@ export default function FAQPage() {
                 Записаться на консультацию
               </a>
               <a
-                href="https://t.me/anyamalets"
+                href="https://t.me/anya_malets"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-text/10 text-text rounded-lg font-semibold hover:bg-text/20 transition-colors"
               >
                 <svg className="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
