@@ -36,11 +36,11 @@ const faqItems = [
   },
   {
     question: "Работаете ли вы онлайн или офлайн?",
-    answer: "Работаю как онлайн, так и офлайн. Эффективность не зависит от формата."
+    answer: "Работаю онлайн. Консультации проводятся через защищённую видеосвязь."
   },
   {
     question: "Как начать терапию?",
-    answer: "Первый шаг — написать или позвонить. Первая консультация — это знакомство и обсуждение вашей ситуации."
+    answer: "Первый шаг — написать мне. Первая консультация — это знакомство и обсуждение вашей ситуации."
   }
 ]
 
@@ -68,8 +68,8 @@ export default function FAQPage() {
 
           <div className="mt-16 p-8 bg-white rounded-lg border border-gray-200 text-center">
             <h2 className="text-2xl font-bold text-text mb-4">Не нашли ответ?</h2>
-            <p className="text-text/70 mb-6">Свяжитесь со мной напрямую. Я помогу разобраться в вашей ситуации.</p>
-            <a href="/contact" className="inline-block px-8 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent/90 transition-colors">
+            <p className="text-text/70 mb-6">Напишите мне в Instagram или Telegram. Я помогу разобраться в вашей ситуации.</p>
+            <a href="https://instagram.com/anyamalets" target="_blank" rel="noopener noreferrer" className="inline-block px-8 py-3 bg-accent text-white rounded-lg font-semibold hover:bg-accent/90 transition-colors">
               Написать мне
             </a>
           </div>
