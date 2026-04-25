@@ -9,21 +9,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  redirects: async () => {
-    return [
-      {
-        source: "/:path*",
-        has: [
-          {
-            type: "host",
-            value: "www.anyamalets.ru",
-          },
-        ],
-        destination: "https://anyamalets.ru/:path*",
-        permanent: true,
-      },
-    ];
-  },
 };
 
 export default nextConfig;
