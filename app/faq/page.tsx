@@ -129,13 +129,6 @@ export default function FAQPage() {
               </a>
             </div>
           </div>
-
-          {/* Disclaimer */}
-          <div className="mt-12 pt-8 border-t border-gray-200 text-center">
-            <p className="text-sm text-text/60">
-              Под термином «психотерапия» на этом сайте подразумевается психологическое консультирование.
-            </p>
-          </div>
         </div>
       </div>
     </main>
