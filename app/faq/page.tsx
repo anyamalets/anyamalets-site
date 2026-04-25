@@ -122,7 +122,7 @@ export default function FAQPage() {
                 href="https://t.me/anyamalets"
                 className="inline-block px-8 py-3 bg-text/10 text-text rounded-lg font-semibold hover:bg-text/20 transition-colors"
               >
-                Написать мне
+                ✈️ Написать мне
               </a>
             </div>
           </div>
