@@ -21,6 +21,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  const legalEntries: MetadataRoute.Sitemap = [
+    "/offer",
+    "/consent",
+    "/privacy-policy",
+    "/agreement-pdn",
+    "/agreement-health-data",
+    "/refund",
+    "/faq",
+  ].map((path) => ({
+    url: `https://anyamalets.ru${path}`,
+    lastModified: new Date().toISOString(),
+    changeFrequency: "yearly" as const,
+    priority: 0.3,
+  }));
+
   return [
     {
       url: "https://anyamalets.ru",
@@ -35,5 +50,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     ...articleEntries,
+    ...legalEntries,
   ];
 }
