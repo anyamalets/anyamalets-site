@@ -54,17 +54,17 @@ export default function CookieConsent() {
         <p className="text-[13px] leading-[1.5] text-text-muted">
           Подробнее —{" "}
           <a
-            href="/agreement-pdn"
+            href="/privacy-policy"
             className="text-accent hover:text-accent-dark underline underline-offset-2"
           >
-            согласие на&nbsp;обработку данных
+            политика обработки данных
           </a>
           {" "}и{" "}
           <a
-            href="/offer#pdn"
+            href="/agreement-pdn"
             className="text-accent hover:text-accent-dark underline underline-offset-2"
           >
-            политика
+            согласие
           </a>
           .
         </p>

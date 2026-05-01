@@ -65,8 +65,12 @@ const documents = [
   { label: "Договор-оферта", href: "/offer" },
   { label: "Условия отмены и возврата", href: "/refund" },
   { label: "Информированное согласие", href: "/consent" },
+  { label: "Политика обработки персональных данных", href: "/privacy-policy" },
   { label: "Согласие на обработку персональных данных", href: "/agreement-pdn" },
-  { label: "Политика обработки персональных данных", href: "/offer#pdn" },
+  {
+    label: "Согласие на обработку специальных категорий ПД",
+    href: "/agreement-health-data",
+  },
 ];
 
 export default function Footer() {
