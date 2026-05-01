@@ -39,8 +39,8 @@ function Field({
   children: React.ReactNode;
 }) {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-[160px_1fr] gap-2 md:gap-6 py-4 md:py-5 border-t border-bg-beige first:border-t-0 first:pt-0">
-      <p className="font-heading text-[14px] md:text-[15px] uppercase tracking-[0.12em] text-accent font-medium">
+    <div className="grid grid-cols-1 md:grid-cols-[220px_1fr] gap-2 md:gap-6 py-4 md:py-5 border-t border-bg-beige first:border-t-0 first:pt-0">
+      <p className="font-heading text-[14px] md:text-[15px] uppercase tracking-[0.12em] text-accent font-medium min-w-0 break-words">
         {label}
       </p>
       <div className="text-[16px] md:text-[17px] leading-[1.65] text-text">
@@ -71,6 +71,7 @@ export default function ConsentPage() {
             внимательно и&nbsp;задайте вопросы, если что-то непонятно.
           </p>
           <p className="mt-3 text-[14px] text-text-muted">
+            Дата публикации: 1&nbsp;мая&nbsp;2026 ·
             Возрастная категория: 18+
           </p>
         </header>
@@ -207,8 +208,8 @@ export default function ConsentPage() {
             <Field label="Длительность">
               50&nbsp;минут. Время окончания фиксированное
               и&nbsp;не&nbsp;сдвигается, если вы&nbsp;опоздали. Если
-              опаздываете более чем&nbsp;на&nbsp;10&nbsp;минут — напишите
-              мне.
+              опаздываете более чем&nbsp;на&nbsp;15&nbsp;минут без
+              уведомления — сессия считается оказанной.
             </Field>
 
             <Field label="Частота">
@@ -227,7 +228,35 @@ export default function ConsentPage() {
 
             <Field label="Отмена и перенос">
               Отменить или&nbsp;перенести сессию можно не&nbsp;менее
-              чем&nbsp;за&nbsp;24&nbsp;часа до&nbsp;начала.
+              чем&nbsp;за&nbsp;24&nbsp;часа до&nbsp;начала. При отмене
+              позже оплата не&nbsp;возвращается. Исключения — болезнь,
+              экстренные обстоятельства, форс-мажор: сообщите мне,
+              сессию перенесу. Если сессию отменяю я&nbsp;менее
+              чем&nbsp;за&nbsp;24&nbsp;часа не&nbsp;по&nbsp;уважительной
+              причине, возвращаю или&nbsp;переношу оплату по&nbsp;вашему
+              выбору и&nbsp;следующую сессию провожу без оплаты. Если
+              моя отмена связана с&nbsp;болезнью или&nbsp;форс-мажором —
+              только возврат или&nbsp;перенос, без дополнительной
+              компенсации. Подробнее — на&nbsp;странице{" "}
+              <a
+                href="/refund"
+                className="text-accent hover:underline"
+              >
+                «Условия отмены и&nbsp;возврата»
+              </a>
+              .
+            </Field>
+
+            <Field label="Прекращение работы">
+              Вы&nbsp;можете прекратить работу в&nbsp;любой момент,
+              без объяснения причин. Оплата за&nbsp;неоказанные сессии
+              возвращается в&nbsp;течение 10&nbsp;рабочих дней.
+              Я&nbsp;со&nbsp;своей стороны могу прекратить работу при
+              грубом нарушении условий с&nbsp;вашей стороны или&nbsp;если
+              станет понятно, что нужна помощь другого специалиста —
+              в&nbsp;этом случае я&nbsp;дам рекомендации к&nbsp;коллегам
+              подходящей специализации и&nbsp;верну оплату
+              за&nbsp;неоказанные сессии.
             </Field>
 
             <Field label="Связь между сессиями">
