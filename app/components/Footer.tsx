@@ -1,3 +1,5 @@
+import CookieSettingsLink from "./CookieSettingsLink";
+
 type IconName = "telegram" | "vk" | "email";
 
 const contacts: {
@@ -61,8 +63,10 @@ function ContactIcon({ name }: { name: IconName }) {
 
 const documents = [
   { label: "Договор-оферта", href: "/offer" },
+  { label: "Условия отмены и возврата", href: "/refund" },
   { label: "Информированное согласие", href: "/consent" },
-  { label: "Обработка персональных данных", href: "/offer#pdn" },
+  { label: "Согласие на обработку персональных данных", href: "/agreement-pdn" },
+  { label: "Политика обработки персональных данных", href: "/offer#pdn" },
 ];
 
 export default function Footer() {
@@ -129,6 +133,9 @@ export default function Footer() {
                   </a>
                 </li>
               ))}
+              <li>
+                <CookieSettingsLink />
+              </li>
             </ul>
           </div>
         </div>
@@ -140,7 +147,15 @@ export default function Footer() {
 
         {/* Bottom strip */}
         <div className="flex flex-col md:flex-row gap-3 md:gap-6 md:items-center md:justify-between text-[13px] text-bg/50 leading-[1.5]">
-          <p>© {year} · Малюточкина Анна Владимировна · ИНН 730292199734</p>
+          <p className="flex items-center gap-3">
+            <span
+              aria-label="Возрастное ограничение: восемнадцать плюс"
+              className="inline-flex items-center justify-center rounded border border-bg/30 px-1.5 py-0.5 text-[11px] font-medium tracking-wide text-bg/70"
+            >
+              18+
+            </span>
+            <span>© {year} · Малюточкина Анна Владимировна · ИНН 730292199734</span>
+          </p>
           <p>Сайт использует Яндекс.Метрику</p>
         </div>
       </div>

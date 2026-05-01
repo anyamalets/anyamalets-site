@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 
 const STORAGE_KEY = "cookie-consent";
 const EVENT_NAME = "cookie-consent-change";
+const REOPEN_EVENT = "cookie-consent-reopen";
 
 export type ConsentValue = "accepted" | "declined";
 
@@ -20,6 +21,10 @@ export default function CookieConsent() {
       // localStorage may be blocked (privacy mode) — fall back to showing the banner
       setIsVisible(true);
     }
+
+    const onReopen = () => setIsVisible(true);
+    window.addEventListener(REOPEN_EVENT, onReopen);
+    return () => window.removeEventListener(REOPEN_EVENT, onReopen);
   }, []);
 
   const save = (value: ConsentValue) => {
@@ -49,10 +54,17 @@ export default function CookieConsent() {
         <p className="text-[13px] leading-[1.5] text-text-muted">
           Подробнее —{" "}
           <a
+            href="/agreement-pdn"
+            className="text-accent hover:text-accent-dark underline underline-offset-2"
+          >
+            согласие на&nbsp;обработку данных
+          </a>
+          {" "}и{" "}
+          <a
             href="/offer#pdn"
             className="text-accent hover:text-accent-dark underline underline-offset-2"
           >
-            политика обработки данных
+            политика
           </a>
           .
         </p>

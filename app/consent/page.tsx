@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Информированное согласие",
   description:
     "Как устроена наша работа, чего ожидать, организационные условия.",
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
 };
 
 function Section({
@@ -69,6 +69,9 @@ export default function ConsentPage() {
           <p className="mt-5 md:mt-6 text-[17px] md:text-[18px] text-text leading-[1.6] max-w-[620px]">
             Этот документ — основа нашей работы. Пожалуйста, прочитайте его
             внимательно и&nbsp;задайте вопросы, если что-то непонятно.
+          </p>
+          <p className="mt-3 text-[14px] text-text-muted">
+            Возрастная категория: 18+
           </p>
         </header>
 
