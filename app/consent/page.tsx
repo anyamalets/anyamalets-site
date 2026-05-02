@@ -71,8 +71,7 @@ export default function ConsentPage() {
             внимательно и&nbsp;задайте вопросы, если что-то непонятно.
           </p>
           <p className="mt-3 text-[14px] text-text-muted">
-            Дата публикации: 1&nbsp;мая&nbsp;2026 ·
-            Возрастная категория: 18+
+            Дата публикации: 1&nbsp;мая&nbsp;2026
           </p>
         </header>
 

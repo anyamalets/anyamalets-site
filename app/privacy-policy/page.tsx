@@ -69,7 +69,7 @@ export default function PrivacyPolicyPage() {
             «О&nbsp;персональных данных» (с&nbsp;изменениями
             от&nbsp;1&nbsp;сентября&nbsp;2025&nbsp;года) ·
             Дата публикации: 1&nbsp;мая&nbsp;2026 ·
-            Версия: 1.0 · Возрастная категория: 18+
+            Версия: 1.0
           </p>
         </header>
 

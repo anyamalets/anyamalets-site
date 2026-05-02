@@ -61,8 +61,7 @@ export default function OfferPage() {
           </h1>
           <p className="mt-4 text-[15px] md:text-[16px] text-text-muted">
             Публичная оферта на&nbsp;оказание психологических услуг ·
-            Дата публикации: 1&nbsp;мая&nbsp;2026 · Возрастная категория
-            информационной продукции: 18+
+            Дата публикации: 1&nbsp;мая&nbsp;2026
           </p>
 
           {/* Quick nav */}

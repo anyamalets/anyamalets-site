@@ -46,9 +46,6 @@ export default function RefundPage() {
             не&nbsp;состоялась, нужны понятные правила: они защищают
             и&nbsp;мою работу, и&nbsp;вашу регулярность в&nbsp;терапии.
           </p>
-          <p className="mt-3 text-[14px] text-text-muted">
-            Возрастная категория: 18+
-          </p>
         </header>
 
         <Block title="Если отменяете вы за 24 часа и больше">

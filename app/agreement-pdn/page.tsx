@@ -60,8 +60,7 @@ export default function AgreementPdnPage() {
             законом &nbsp;№&nbsp;152-ФЗ «О&nbsp;персональных данных»
             (с&nbsp;изменениями, вступившими в&nbsp;силу
             1&nbsp;сентября&nbsp;2025&nbsp;года) ·
-            Дата публикации: 1&nbsp;мая&nbsp;2026 ·
-            Возрастная категория: 18+
+            Дата публикации: 1&nbsp;мая&nbsp;2026
           </p>
 
           <p className="mt-8 md:mt-10 text-[16px] md:text-[17px] leading-[1.65] text-text">

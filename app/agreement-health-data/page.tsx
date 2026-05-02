@@ -60,8 +60,7 @@ export default function AgreementHealthDataPage() {
           <p className="mt-4 text-[14px] md:text-[15px] text-text-muted">
             Отдельный документ в&nbsp;соответствии со&nbsp;ст.&nbsp;10
             Федерального закона №&nbsp;152-ФЗ «О&nbsp;персональных
-            данных» · Дата публикации: 1&nbsp;мая&nbsp;2026 ·
-            Возрастная категория: 18+
+            данных» · Дата публикации: 1&nbsp;мая&nbsp;2026
           </p>
 
           <p className="mt-8 md:mt-10 text-[16px] md:text-[17px] leading-[1.65] text-text">
