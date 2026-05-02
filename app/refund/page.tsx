@@ -77,8 +77,8 @@ export default function RefundPage() {
             отключение электричества или&nbsp;интернета в&nbsp;вашем доме,
             массовые отключения связи в&nbsp;регионе, иные технические
             или&nbsp;внешние обстоятельства, которые от&nbsp;вас
-            не&nbsp;зависят. Сообщите мне — перенесу сессию без удержания
-            оплаты или&nbsp;верну деньги, как&nbsp;удобнее.
+            не&nbsp;зависят. Сообщите мне, и&nbsp;я&nbsp;перенесу сессию без
+            удержания оплаты или&nbsp;верну деньги, как&nbsp;удобнее.
           </p>
           <p>
             Если отмены становятся регулярными — обсудим, помогает
@@ -135,7 +135,7 @@ export default function RefundPage() {
             >
               psy@anyamalets.ru
             </a>
-            . Время считаю по&nbsp;Москве.
+            . Ориентируйтесь на&nbsp;московское время.
           </p>
         </Block>
 
@@ -150,13 +150,13 @@ export default function RefundPage() {
             </a>
             . Укажите имя, дату сессии и&nbsp;реквизиты для&nbsp;возврата.
             Отвечу в&nbsp;течение 10&nbsp;рабочих дней. Банковские комиссии
-            при возврате — на&nbsp;вашей стороне.
+            при возврате оплачиваете вы.
           </p>
         </Block>
 
         <div className="mt-14 md:mt-16 pt-8 border-t border-bg-beige">
           <p className="text-[15px] md:text-[16px] text-text-muted leading-[1.6]">
-            Полный текст условий — в&nbsp;{" "}
+            Полный текст условий смотрите в&nbsp;{" "}
             <a
               href="/offer#p5"
               className="text-accent hover:underline"
