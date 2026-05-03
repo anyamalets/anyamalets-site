@@ -139,7 +139,7 @@ export default async function ArticlePage({
         }}
       >
         {/* Overlay for better text contrast */}
-        <div className="absolute inset-0 bg-bg/80 backdrop-blur-sm"></div>
+        <div className="absolute inset-0 bg-bg/60 backdrop-blur-sm"></div>
 
         <div className="relative z-10 mx-auto max-w-[820px] px-6 md:px-10 py-20 md:py-32 lg:py-40">
           <Link
