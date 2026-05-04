@@ -1,12 +1,13 @@
 import CookieSettingsLink from "./CookieSettingsLink";
 
-type IconName = "telegram" | "vk" | "email";
+type IconName = "telegram" | "vk" | "email" | "b17";
 
 const contacts: {
   label: string;
   icon: IconName;
   value: string;
   href: string;
+  rel?: string;
 }[] = [
   { label: "Telegram", icon: "telegram", value: "@anya_malets", href: "https://t.me/anya_malets" },
   {
@@ -17,6 +18,13 @@ const contacts: {
   },
   { label: "VK", icon: "vk", value: "anya.malets", href: "https://vk.com/anya.malets" },
   { label: "Email", icon: "email", value: "psy@anyamalets.ru", href: "mailto:psy@anyamalets.ru" },
+  {
+    label: "Профиль на сайте психологов b17.ru",
+    icon: "b17",
+    value: "Профиль на b17.ru",
+    href: "https://www.b17.ru/id1273334/?prt=1273334",
+    rel: "nofollow noopener",
+  },
 ];
 
 function ContactIcon({ name }: { name: IconName }) {
@@ -56,6 +64,37 @@ function ContactIcon({ name }: { name: IconName }) {
         <svg {...common}>
           <rect x="3" y="5" width="18" height="14" rx="2" />
           <path d="m3.5 6.5 8 6c.3.2.7.2 1 0l8-6" />
+        </svg>
+      );
+    case "b17":
+      return (
+        <svg
+          width={18}
+          height={18}
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden
+        >
+          <rect
+            x="2.5"
+            y="2.5"
+            width="19"
+            height="19"
+            rx="3"
+            stroke="currentColor"
+            strokeWidth={1.6}
+          />
+          <text
+            x="12"
+            y="16"
+            textAnchor="middle"
+            fontSize="10"
+            fontWeight="700"
+            fontFamily="Roboto, system-ui, sans-serif"
+            fill="currentColor"
+          >
+            b17
+          </text>
         </svg>
       );
   }
@@ -107,7 +146,7 @@ export default function Footer() {
                     href={c.href}
                     target={c.href.startsWith("http") ? "_blank" : undefined}
                     rel={
-                      c.href.startsWith("http") ? "noopener noreferrer" : undefined
+                      c.rel ?? (c.href.startsWith("http") ? "noopener noreferrer" : undefined)
                     }
                     className="inline-flex items-center gap-2.5 text-[15px] md:text-[16px] text-bg hover:text-accent transition-colors group"
                   >
