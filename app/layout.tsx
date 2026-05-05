@@ -4,7 +4,43 @@ import "./globals.css";
 import YandexMetrika from "./components/YandexMetrika";
 import YandexMetrikaTracker from "./components/YandexMetrikaTracker";
 import CookieConsent from "./components/CookieConsent";
-import SchemaScripts from "./components/SchemaScripts";
+
+const SITE_URL = "https://anyamalets.ru";
+
+const businessLd = {
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "@id": `${SITE_URL}/#business`,
+  name: "Анна Малюточкина — психотерапия расстройств пищевого поведения",
+  alternateName: "anyamalets.ru",
+  url: SITE_URL,
+  image: `${SITE_URL}/photos/hero.jpg`,
+  description:
+    "Психотерапевтическая практика по работе с расстройствами пищевого поведения (РПП) в доказательном подходе: когнитивно-поведенческая терапия (КПТ), терапия принятия и ответственности (ACT), диалектико-поведенческая терапия (DBT).",
+  serviceType: "Психотерапия расстройств пищевого поведения",
+  areaServed: { "@type": "Country", name: "Россия" },
+  availableLanguage: "ru",
+  priceRange: "₽₽",
+  founder: { "@id": `${SITE_URL}/#person` },
+  provider: { "@id": `${SITE_URL}/#person` },
+  makesOffer: { "@id": `${SITE_URL}/#service` },
+  knowsAbout: [
+    "Расстройства пищевого поведения",
+    "Нервная анорексия",
+    "Нервная булимия",
+    "Компульсивное переедание",
+    "Когнитивно-поведенческая терапия",
+    "Терапия принятия и ответственности",
+    "Диалектико-поведенческая терапия",
+    "Эмоциональная регуляция",
+    "Образ тела",
+  ],
+  sameAs: [
+    "https://t.me/anya_malets",
+    "https://t.me/razreshayu_sebe_zhit",
+    "https://vk.com/anya.malets",
+  ],
+};
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -29,10 +65,7 @@ const parisienne = Parisienne({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://anyamalets.ru"),
-  title: {
-    default: "Анна Малюточкина — психолог, расстройства пищевого поведения",
-    template: "%s · Анна Малюточкина",
-  },
+  title: "Анна Малюточкина — психолог, расстройства пищевого поведения",
   description:
     "Терапия расстройств пищевого поведения (РПП) в доказательном подходе — когнитивно-поведенческая терапия (КПТ), терапия принятия и ответственности (ACT), диалектико-поведенческая терапия (DBT). Помогаю женщинам восстановить спокойные отношения с едой и своим телом.",
   openGraph: {
@@ -72,7 +105,15 @@ export default function RootLayout({
       lang="ru"
       className={`${roboto.variable} ${openSans.variable} ${parisienne.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="preconnect" href="https://cdn.sanity.io" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://cdn.sanity.io" />
+      </head>
       <body className="min-h-full flex flex-col">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(businessLd) }}
+        />
         {/* Skip to content link for accessibility */}
         <a
           href="#main-content"
@@ -80,9 +121,6 @@ export default function RootLayout({
         >
           Перейти к содержанию
         </a>
-
-        {/* Schema.org structured data for search engines */}
-        <SchemaScripts />
 
         {children}
         <YandexMetrika />

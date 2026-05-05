@@ -3,9 +3,19 @@ import Link from "next/link";
 import { client } from "../../sanity/client";
 
 export const metadata: Metadata = {
-  title: "Статьи",
+  title: "Статьи · Анна Малюточкина",
   description:
     "Статьи о расстройствах пищевого поведения, терапии и отношениях с едой и телом.",
+  alternates: {
+    canonical: "/articles",
+  },
+  openGraph: {
+    title: "Статьи · Анна Малюточкина",
+    description:
+      "Статьи о расстройствах пищевого поведения, терапии и отношениях с едой и телом.",
+    url: "/articles",
+    type: "website",
+  },
 };
 
 type Post = {

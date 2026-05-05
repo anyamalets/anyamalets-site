@@ -18,6 +18,7 @@ const SITE_URL = "https://anyamalets.ru";
 const personLd = {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": `${SITE_URL}/#person`,
   name: "Анна Малюточкина",
   alternateName: "Anna Malyutochkina",
   jobTitle: "Психолог, специалист по расстройствам пищевого поведения",
@@ -40,10 +41,6 @@ const personLd = {
       "@type": "Organization",
       name: "Ассоциация специалистов, информированных о РПП (АРППС)",
     },
-    {
-      "@type": "Organization",
-      name: "Rome Foundation GastroPsych",
-    },
   ],
   knowsAbout: [
     "Расстройства пищевого поведения",
@@ -57,15 +54,12 @@ const personLd = {
 const serviceLd = {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": `${SITE_URL}/#service`,
   serviceType: "Психологическая консультация",
   name: "Онлайн-сессия с психологом",
   description:
     "Онлайн-сессия с психологом Анной Малюточкиной, 50 минут. Работа с расстройствами пищевого поведения в доказательном подходе: когнитивно-поведенческая терапия (КПТ), терапия принятия и ответственности (ACT), диалектико-поведенческая терапия (DBT).",
-  provider: {
-    "@type": "Person",
-    name: "Анна Малюточкина",
-    url: SITE_URL,
-  },
+  provider: { "@id": `${SITE_URL}/#person` },
   areaServed: { "@type": "Country", name: "Россия" },
   availableChannel: {
     "@type": "ServiceChannel",

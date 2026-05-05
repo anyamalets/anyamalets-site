@@ -1,13 +1,19 @@
 import type { Metadata } from "next"
+import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "FAQ — Часто задаваемые вопросы о РПП",
+  title: "FAQ — Часто задаваемые вопросы о РПП · Анна Малюточкина",
   description:
     "Ответы на часто задаваемые вопросы о расстройствах пищевого поведения и психотерапии РПП.",
+  alternates: {
+    canonical: "/faq",
+  },
   openGraph: {
     title: "FAQ — Часто задаваемые вопросы о РПП",
     description:
       "Ответы на часто задаваемые вопросы о расстройствах пищевого поведения и психотерапии РПП.",
+    url: "/faq",
+    type: "website",
   },
 }
 
@@ -75,15 +81,32 @@ const faqItems = [
 ]
 
 export default function FAQPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  }
+
   return (
     <main id="main-content" className="flex-1">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <div className="min-h-screen bg-gradient-to-b from-bg to-bg/95 py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mx-auto">
           {/* Back Button */}
           <div className="mb-8">
-            <a href="/" className="inline-flex items-center text-accent hover:text-accent/80 transition-colors font-medium">
+            <Link href="/" className="inline-flex items-center text-accent hover:text-accent/80 transition-colors font-medium">
               ← На главную
-            </a>
+            </Link>
           </div>
 
           {/* Header */}

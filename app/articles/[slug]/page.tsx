@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { client } from "../../../sanity/client";
 import { urlFor } from "../../../sanity/image";
+import AuthorCard from "../../components/AuthorCard";
 
 type Post = {
   _id: string;
@@ -32,6 +33,24 @@ const POST_QUERY = `*[_type == "post" && slug.current == $slug][0] {
 }`;
 
 export const revalidate = 60;
+
+const WORDS_PER_MINUTE = 200;
+
+function countWords(blocks: PortableTextBlock[] | undefined | null): number {
+  if (!blocks?.length) return 0;
+  let words = 0;
+  for (const block of blocks) {
+    if (block._type !== "block") continue;
+    const children = (block as { children?: { _type?: string; text?: string }[] }).children;
+    if (!children) continue;
+    for (const child of children) {
+      if (child._type === "span" && typeof child.text === "string") {
+        words += child.text.trim().split(/\s+/).filter(Boolean).length;
+      }
+    }
+  }
+  return words;
+}
 
 export async function generateMetadata({
   params,
@@ -96,6 +115,9 @@ export default async function ArticlePage({
     ? urlFor(post.coverImage).width(1200).height(630).fit("crop").quality(85).url()
     : undefined;
 
+  const wordCount = countWords(post.body);
+  const readingMinutes = Math.max(1, Math.round(wordCount / WORDS_PER_MINUTE));
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -105,6 +127,8 @@ export default async function ArticlePage({
     datePublished: post.publishedAt || undefined,
     dateModified: post._updatedAt || post.publishedAt || undefined,
     inLanguage: "ru",
+    wordCount,
+    timeRequired: `PT${readingMinutes}M`,
     author: {
       "@type": "Person",
       name: "Анна Малюточкина",
@@ -119,11 +143,40 @@ export default async function ArticlePage({
     mainEntityOfPage: articleUrl,
   };
 
+  const breadcrumbsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Главная",
+        item: "https://anyamalets.ru",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Статьи",
+        item: "https://anyamalets.ru/articles",
+      },
+      {
+        "@type": "ListItem",
+        position: 3,
+        name: post.title,
+        item: articleUrl,
+      },
+    ],
+  };
+
   return (
     <main id="main-content" className="bg-bg text-text">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
       />
 
       {/* Hero header section with background image */}
@@ -142,26 +195,53 @@ export default async function ArticlePage({
         <div className="absolute inset-0 bg-bg/60 backdrop-blur-sm"></div>
 
         <div className="relative z-10 mx-auto max-w-[820px] px-6 md:px-10 py-20 md:py-32 lg:py-40">
-          <Link
-            href="/articles"
-            className="inline-flex items-center gap-2 text-[14px] text-text-muted hover:text-accent transition-colors"
-          >
-            <span aria-hidden="true">←</span>
-            <span>Все статьи</span>
-          </Link>
+          <nav aria-label="Хлебные крошки">
+            <ol className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[13px] md:text-[14px] text-text-muted">
+              <li>
+                <Link
+                  href="/"
+                  className="hover:text-accent transition-colors"
+                >
+                  Главная
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-text-muted/60">
+                /
+              </li>
+              <li>
+                <Link
+                  href="/articles"
+                  className="hover:text-accent transition-colors"
+                >
+                  Статьи
+                </Link>
+              </li>
+              <li aria-hidden="true" className="text-text-muted/60">
+                /
+              </li>
+              <li
+                aria-current="page"
+                className="text-text-muted/80 truncate max-w-[60vw] md:max-w-[420px]"
+                title={post.title}
+              >
+                {post.title}
+              </li>
+            </ol>
+          </nav>
 
-          {post.publishedAt && (
-            <time
-              dateTime={post.publishedAt}
-              className="mt-6 md:mt-8 block text-[13px] md:text-[14px] text-text-muted"
-            >
-              {new Date(post.publishedAt).toLocaleDateString("ru-RU", {
-                day: "numeric",
-                month: "long",
-                year: "numeric",
-              })}
-            </time>
-          )}
+          <p className="mt-6 md:mt-8 text-[13px] md:text-[14px] text-text-muted">
+            {post.publishedAt && (
+              <time dateTime={post.publishedAt}>
+                {new Date(post.publishedAt).toLocaleDateString("ru-RU", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </time>
+            )}
+            {post.publishedAt && <span aria-hidden="true"> · </span>}
+            <span>{readingMinutes} мин чтения</span>
+          </p>
 
           <h1 className="mt-4 md:mt-6 text-[32px] md:text-[44px] lg:text-[52px] font-semibold leading-[1.1] tracking-tight text-text">
             {post.title}
@@ -248,7 +328,9 @@ export default async function ArticlePage({
           />
         </article>
 
-        <div className="mt-16 md:mt-20 pt-10 border-t border-bg-beige flex flex-wrap gap-6 items-center">
+        <AuthorCard />
+
+        <div className="mt-12 md:mt-16 pt-8 border-t border-bg-beige flex flex-wrap gap-6 items-center">
           <Link
             href="/articles"
             className="inline-flex items-center gap-2 text-[15px] text-text-muted hover:text-accent transition-colors"
