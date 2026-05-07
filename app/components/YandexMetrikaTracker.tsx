@@ -30,15 +30,46 @@ export default function YandexMetrikaTracker() {
         const goal = trackedElement.dataset.ymGoal;
         if (goal) reachGoal(goal);
       }
-
-      // Goal: interaction with Planerka widget
-      const planerkaElement = target.closest<HTMLElement>(".app-planerka-embed");
-      if (planerkaElement) {
-        reachGoal("planerka_widget_interaction");
-      }
     };
 
     document.addEventListener("click", handleClick, { capture: true });
+
+    // Goal: interaction with Planerka widget (cross-origin iframe — clicks
+    // don't bubble, so listen for the widget's own postMessage signals and
+    // fall back to detecting iframe focus on click).
+    let planerkaTriggered = false;
+    const triggerPlanerka = () => {
+      if (planerkaTriggered) return;
+      planerkaTriggered = true;
+      reachGoal("planerka_widget_interaction");
+    };
+
+    const handleMessage = (event: MessageEvent) => {
+      if (event.origin !== "https://planerka.app") return;
+      let data = event.data;
+      if (typeof data === "string") {
+        try {
+          data = JSON.parse(data);
+        } catch {
+          return;
+        }
+      }
+      if (data && data.type === "planerka:enable_scroll") {
+        triggerPlanerka();
+      }
+    };
+    window.addEventListener("message", handleMessage);
+
+    const handleBlur = () => {
+      const active = document.activeElement;
+      if (
+        active instanceof HTMLIFrameElement &&
+        active.closest(".app-planerka-embed")
+      ) {
+        triggerPlanerka();
+      }
+    };
+    window.addEventListener("blur", handleBlur);
 
     // Goal: scrolled to pricing block
     const pricingSection = document.getElementById("zapis");
@@ -63,6 +94,8 @@ export default function YandexMetrikaTracker() {
 
     return () => {
       document.removeEventListener("click", handleClick, { capture: true });
+      window.removeEventListener("message", handleMessage);
+      window.removeEventListener("blur", handleBlur);
       observer?.disconnect();
     };
   }, []);
