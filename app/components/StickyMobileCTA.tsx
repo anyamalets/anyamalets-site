@@ -37,7 +37,7 @@ export default function StickyMobileCTA() {
   return (
     <div
       aria-hidden={!isVisible}
-      className={`lg:hidden fixed bottom-4 left-4 right-4 z-30 transition-all duration-300 ${
+      className={`lg:hidden fixed bottom-4 left-0 right-0 z-30 flex justify-center px-4 transition-all duration-300 ${
         isVisible
           ? "opacity-100 translate-y-0 pointer-events-auto"
           : "opacity-0 translate-y-4 pointer-events-none"
@@ -47,7 +47,7 @@ export default function StickyMobileCTA() {
         href={ctaHref}
         data-ym-goal="click_znakomstvo_button"
         tabIndex={isVisible ? 0 : -1}
-        className="flex items-center justify-center w-full rounded-xl bg-accent px-6 py-4 text-[16px] font-medium text-bg shadow-lg shadow-accent/25 transition-colors hover:bg-accent-dark"
+        className="inline-flex items-center justify-center whitespace-nowrap rounded-lg bg-accent px-5 py-3 text-[15px] font-medium text-bg shadow-lg shadow-accent/25 transition-colors hover:bg-accent-dark"
       >
         Записаться на вводную консультацию
       </a>
