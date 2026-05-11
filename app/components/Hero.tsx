@@ -1,6 +1,16 @@
 import Image from "next/image";
 
-export default function Hero() {
+type HeroProps = {
+  ctaLabel?: string;
+  ctaEyebrow?: string;
+  ctaGoal?: string;
+};
+
+export default function Hero({
+  ctaLabel = "Записаться на встречу",
+  ctaEyebrow,
+  ctaGoal = "click_zapis_button",
+}: HeroProps) {
   return (
     <section className="relative w-full bg-bg overflow-hidden">
       <div className="mx-auto max-w-[1200px] relative px-6 md:px-10 lg:px-14">
@@ -41,25 +51,35 @@ export default function Hero() {
             </p>
 
             {/* Desktop CTA — hidden on mobile */}
-            <div className="hidden md:block mt-8 md:mt-10">
+            <div className="hidden md:flex flex-col items-start gap-3 mt-8 md:mt-10">
+              {ctaEyebrow && (
+                <p className="font-heading text-[12px] md:text-[13px] uppercase tracking-[0.18em] text-accent font-medium">
+                  {ctaEyebrow}
+                </p>
+              )}
               <a
                 href="#zapis"
-                data-ym-goal="click_zapis_button"
+                data-ym-goal={ctaGoal}
                 className="inline-flex items-center justify-center rounded-lg bg-accent px-7 py-4 text-base md:text-lg font-medium text-bg transition-colors hover:bg-accent-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
               >
-                Записаться на встречу
+                {ctaLabel}
               </a>
             </div>
           </div>
 
           {/* Mobile CTA — hidden on desktop, after photo */}
-          <div className="md:hidden order-3 flex justify-center">
+          <div className="md:hidden order-3 flex flex-col items-center gap-3">
+            {ctaEyebrow && (
+              <p className="font-heading text-[12px] uppercase tracking-[0.18em] text-accent font-medium">
+                {ctaEyebrow}
+              </p>
+            )}
             <a
               href="#zapis"
-              data-ym-goal="click_zapis_button"
+              data-ym-goal={ctaGoal}
               className="inline-flex items-center justify-center rounded-lg bg-accent px-7 py-4 text-base font-medium text-bg transition-colors hover:bg-accent-dark"
             >
-              Записаться на встречу
+              {ctaLabel}
             </a>
           </div>
         </div>

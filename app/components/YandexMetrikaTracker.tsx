@@ -36,12 +36,18 @@ export default function YandexMetrikaTracker() {
 
     // Goal: interaction with Planerka widget (cross-origin iframe — clicks
     // don't bubble, so listen for the widget's own postMessage signals and
-    // fall back to detecting iframe focus on click).
+    // fall back to detecting iframe focus on click). Path determines which
+    // funnel the interaction belongs to (znakomstvo = free intro, otherwise = paid).
     let planerkaTriggered = false;
     const triggerPlanerka = () => {
       if (planerkaTriggered) return;
       planerkaTriggered = true;
-      reachGoal("planerka_widget_interaction");
+      const isZnakomstvo =
+        typeof window !== "undefined" &&
+        window.location.pathname.startsWith("/znakomstvo");
+      reachGoal(
+        isZnakomstvo ? "znakomstvo_widget_interaction" : "planerka_widget_interaction",
+      );
     };
 
     const handleMessage = (event: MessageEvent) => {

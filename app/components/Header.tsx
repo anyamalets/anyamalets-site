@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 
 const navLinks = [
   { label: "Как я работаю", href: "/#methods" },
@@ -11,17 +12,10 @@ const navLinks = [
 ];
 
 export default function Header() {
-  const [showCta, setShowCta] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setShowCta(window.scrollY > 500);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
+  const pathname = usePathname();
+  const isZnakomstvo = pathname === "/znakomstvo";
+  const ctaHref = isZnakomstvo ? "#zapis" : "/znakomstvo";
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -58,19 +52,13 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            {/* Desktop CTA — appears on scroll. On mobile, the floating StickyMobileCTA handles this instead. */}
+            {/* Desktop CTA — always visible. Primary entry point for paid ad traffic. */}
             <a
-              href="#zapis"
-              data-ym-goal="click_zapis_button"
-              aria-hidden={!showCta}
-              tabIndex={showCta ? 0 : -1}
-              className={`hidden lg:inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-[15px] font-medium text-bg transition-all duration-300 hover:bg-accent-dark ${
-                showCta
-                  ? "opacity-100 translate-y-0 pointer-events-auto"
-                  : "opacity-0 -translate-y-1 pointer-events-none"
-              }`}
+              href={ctaHref}
+              data-ym-goal="click_znakomstvo_button"
+              className="hidden lg:inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-[15px] font-medium text-bg transition-colors hover:bg-accent-dark"
             >
-              Записаться
+              Записаться на вводную консультацию
             </a>
 
             {/* Mobile burger */}
@@ -125,11 +113,19 @@ export default function Header() {
               key={link.href}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
-              className="py-3 text-[16px] text-text hover:text-accent transition-colors border-b border-bg-beige/60 last:border-b-0"
+              className="py-3 text-[16px] text-text hover:text-accent transition-colors border-b border-bg-beige/60"
             >
               {link.label}
             </a>
           ))}
+          <a
+            href={ctaHref}
+            data-ym-goal="click_znakomstvo_button"
+            onClick={() => setIsMenuOpen(false)}
+            className="mt-4 inline-flex items-center justify-center rounded-lg bg-accent px-5 py-3 text-[16px] font-medium text-bg transition-colors hover:bg-accent-dark"
+          >
+            Записаться на вводную консультацию
+          </a>
         </nav>
       </div>
     </header>
