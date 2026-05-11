@@ -68,16 +68,16 @@ export default function Hero({
           </div>
 
           {/* Mobile CTA — hidden on desktop, after photo */}
-          <div className="md:hidden order-3 flex flex-col items-center gap-3">
+          <div className="md:hidden order-3 flex flex-col items-center gap-2.5">
             {ctaEyebrow && (
-              <p className="font-heading text-[12px] uppercase tracking-[0.18em] text-accent font-medium">
+              <p className="font-heading text-[11px] uppercase tracking-[0.18em] text-accent font-medium">
                 {ctaEyebrow}
               </p>
             )}
             <a
               href="#zapis"
               data-ym-goal={ctaGoal}
-              className="inline-flex items-center justify-center rounded-lg bg-accent px-7 py-4 text-base font-medium text-bg transition-colors hover:bg-accent-dark"
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-lg bg-accent px-6 py-3 text-[15px] font-medium text-bg transition-colors hover:bg-accent-dark"
             >
               {ctaLabel}
             </a>
