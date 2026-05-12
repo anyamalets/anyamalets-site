@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Header from "../components/Header";
-import Hero from "../components/Hero";
+import HeroZnakomstvo from "../components/HeroZnakomstvo";
 import Recognize from "../components/Recognize";
 import Methods from "../components/Methods";
 import Changes from "../components/Changes";
@@ -32,11 +32,7 @@ export default function ZnakomstvoPage() {
     <>
       <Header />
       <main id="main-content">
-        <Hero
-          ctaEyebrow="Бесплатная встреча"
-          ctaLabel="Записаться на вводную консультацию"
-          ctaGoal="click_znakomstvo_button"
-        />
+        <HeroZnakomstvo />
         <Recognize />
         <Methods />
         <Changes />
