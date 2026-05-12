@@ -20,7 +20,7 @@ export default function Hero({
             <div className="relative mx-auto w-full max-w-[420px] md:max-w-none aspect-[2/3] overflow-hidden rounded-xl">
               <Image
                 src="/photos/hero.jpg"
-                alt="Анна Малюточкина, психолог"
+                alt="Анна Малюточкина, психолог по расстройствам пищевого поведения"
                 fill
                 priority
                 fetchPriority="high"
@@ -33,21 +33,18 @@ export default function Hero({
           {/* Text — first on mobile, second on desktop */}
           <div className="md:col-span-7 lg:col-span-7 order-1 md:order-2 flex flex-col">
             <p className="text-xs md:text-sm uppercase tracking-[0.2em] text-text-muted mb-5 md:mb-6">
-              Психолог · расстройства пищевого поведения
+              Анна Малюточкина
             </p>
 
-            <h1 className="text-[32px] leading-[1.1] sm:text-[44px] md:text-[52px] lg:text-[60px] font-semibold text-text tracking-tight">
-              Вернуть доверие
+            <h1 className="text-[30px] leading-[1.1] sm:text-[40px] md:text-[48px] lg:text-[56px] font-semibold text-text tracking-tight">
+              Психолог по расстройствам
               <br />
-              <span className="text-accent">к себе</span>
+              <span className="text-accent">пищевого поведения</span>
             </h1>
 
             <p className="mt-6 md:mt-8 max-w-[560px] text-lg md:text-xl leading-[1.55] text-text">
-              Меня зовут{" "}
-              <span className="whitespace-nowrap">Анна Малюточкина</span>,
-              я&nbsp;психолог. Помогаю восстановить спокойные отношения
-              с&nbsp;едой и&nbsp;своим телом — без диет, контроля
-              и&nbsp;силы воли.
+              Помогаю восстановить спокойные отношения с&nbsp;едой
+              и&nbsp;своим телом, без диет, контроля и&nbsp;силы воли.
             </p>
 
             {/* Desktop CTA — hidden on mobile */}
