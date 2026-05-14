@@ -8,7 +8,8 @@ export default function StickyMobileCTA() {
   const [isZapisVisible, setIsZapisVisible] = useState(false);
   const pathname = usePathname();
   const isZnakomstvo = pathname === "/znakomstvo";
-  const ctaHref = isZnakomstvo ? "#zapis" : "/znakomstvo";
+  const ctaHref = isZnakomstvo ? "#zapis" : "/#zapis";
+  const ctaGoal = isZnakomstvo ? "click_znakomstvo_button" : "click_zapis_button";
 
   useEffect(() => {
     const onScroll = () => {
@@ -45,11 +46,11 @@ export default function StickyMobileCTA() {
     >
       <a
         href={ctaHref}
-        data-ym-goal="click_znakomstvo_button"
+        data-ym-goal={ctaGoal}
         tabIndex={isVisible ? 0 : -1}
         className="inline-flex items-center justify-center whitespace-nowrap rounded-lg bg-accent px-5 py-3 text-[15px] font-medium text-bg shadow-lg shadow-accent/25 transition-colors hover:bg-accent-dark"
       >
-        Записаться на вводную консультацию
+        Записаться
       </a>
     </div>
   );

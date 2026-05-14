@@ -105,7 +105,7 @@ export default function Home() {
       />
       <Header />
       <main id="main-content">
-        <Hero />
+        <Hero ctaLabel="Записаться" />
         <Recognize />
         <Methods />
         <Changes />

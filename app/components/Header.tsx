@@ -15,7 +15,8 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const pathname = usePathname();
   const isZnakomstvo = pathname === "/znakomstvo";
-  const ctaHref = isZnakomstvo ? "#zapis" : "/znakomstvo";
+  const ctaHref = isZnakomstvo ? "#zapis" : "/#zapis";
+  const ctaGoal = isZnakomstvo ? "click_znakomstvo_button" : "click_zapis_button";
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -52,13 +53,14 @@ export default function Header() {
           </nav>
 
           <div className="flex items-center gap-2">
-            {/* Desktop CTA — always visible. Primary entry point for paid ad traffic. */}
+            {/* Desktop CTA — always visible. On /znakomstvo goes to the free
+                intro form; everywhere else goes to paid booking on the home page. */}
             <a
               href={ctaHref}
-              data-ym-goal="click_znakomstvo_button"
+              data-ym-goal={ctaGoal}
               className="hidden lg:inline-flex items-center justify-center rounded-lg bg-accent px-5 py-2.5 text-[15px] font-medium text-bg transition-colors hover:bg-accent-dark"
             >
-              Записаться на вводную консультацию
+              Записаться
             </a>
 
             {/* Mobile burger */}
@@ -120,11 +122,11 @@ export default function Header() {
           ))}
           <a
             href={ctaHref}
-            data-ym-goal="click_znakomstvo_button"
+            data-ym-goal={ctaGoal}
             onClick={() => setIsMenuOpen(false)}
             className="mt-4 inline-flex items-center justify-center rounded-lg bg-accent px-5 py-3 text-[16px] font-medium text-bg transition-colors hover:bg-accent-dark"
           >
-            Записаться на вводную консультацию
+            Записаться
           </a>
         </nav>
       </div>
