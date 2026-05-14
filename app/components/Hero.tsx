@@ -57,7 +57,7 @@ export default function Hero({
               <a
                 href="#zapis"
                 data-ym-goal={ctaGoal}
-                className="inline-flex items-center justify-center rounded-lg bg-accent px-7 py-4 text-base md:text-lg font-medium text-bg transition-colors hover:bg-accent-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+                className="inline-flex min-w-[240px] items-center justify-center rounded-lg bg-accent px-10 py-4 text-base md:text-lg font-medium text-bg transition-colors hover:bg-accent-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
               >
                 {ctaLabel}
               </a>

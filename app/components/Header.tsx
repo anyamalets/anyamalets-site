@@ -39,20 +39,21 @@ export default function Header() {
             Анна Малюточкина
           </a>
 
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="link-underline text-[15px] text-text hover:text-accent transition-colors"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <div className="flex items-center gap-8">
+            {/* Desktop nav */}
+            <nav className="hidden lg:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="link-underline text-[15px] text-text hover:text-accent transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
 
-          <div className="flex items-center gap-2">
+            <div className="flex items-center gap-2">
             {/* Desktop CTA — always visible. On /znakomstvo goes to the free
                 intro form; everywhere else goes to paid booking on the home page. */}
             <a
@@ -96,6 +97,7 @@ export default function Header() {
                 )}
               </svg>
             </button>
+            </div>
           </div>
         </div>
       </div>
