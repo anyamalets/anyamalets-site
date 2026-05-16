@@ -30,8 +30,8 @@ export default function Recognize() {
         </h2>
 
         <p className="mt-5 md:mt-6 max-w-[620px] mx-auto text-center text-base md:text-lg text-text-muted leading-[1.6]">
-          Если что-то из&nbsp;этого про вас — вы&nbsp;не&nbsp;одна. И&nbsp;это
-          не&nbsp;про слабость характера или отсутствие силы воли. С&nbsp;этим
+          Если что-то из&nbsp;этого узнаёте — вы&nbsp;не&nbsp;одна. И&nbsp;дело
+          не&nbsp;в&nbsp;слабости характера или отсутствии силы воли. С&nbsp;этим
           работают. Я&nbsp;помогаю.
         </p>
 
