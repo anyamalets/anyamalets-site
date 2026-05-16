@@ -4,7 +4,7 @@ import HeroZnakomstvo from "../components/HeroZnakomstvo";
 import Recognize from "../components/Recognize";
 import Methods from "../components/Methods";
 import Changes from "../components/Changes";
-import Testimonials from "../components/Testimonials";
+import Credentials from "../components/Credentials";
 import Boundaries from "../components/Boundaries";
 import About from "../components/About";
 import Education from "../components/Education";
@@ -36,7 +36,7 @@ export default function ZnakomstvoPage() {
         <Recognize />
         <Methods />
         <Changes />
-        <Testimonials />
+        <Credentials />
         <Boundaries />
         <About />
         <Education />

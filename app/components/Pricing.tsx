@@ -15,9 +15,9 @@ export default function Pricing() {
 
         {/* Intro nudge for first-time visitors */}
         <div className="mt-10 md:mt-12 mx-auto max-w-[640px] rounded-xl border border-accent/30 bg-bg/60 p-6 md:p-7 flex flex-col gap-4 text-center items-center">
-          <p className="text-[15px] md:text-[16px] leading-[1.65] text-text">
-            Если мы&nbsp;ещё не&nbsp;знакомы, можно начать со&nbsp;встречи-знакомства:
-            15&nbsp;минут, бесплатно.
+          <p className="text-[15px] md:text-[16px] leading-[1.65] text-text text-balance">
+            Если мы&nbsp;еще не&nbsp;знакомы, можно начать с&nbsp;вводной встречи:
+            15&nbsp;мин, бесплатно.
           </p>
           <a
             href="/znakomstvo#zapis"
