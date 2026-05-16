@@ -17,8 +17,7 @@ export default function Pricing() {
         <div className="mt-10 md:mt-12 mx-auto max-w-[640px] rounded-xl border border-accent/30 bg-bg/60 p-6 md:p-7 flex flex-col gap-4 text-center items-center">
           <p className="text-[15px] md:text-[16px] leading-[1.65] text-text">
             Если мы&nbsp;ещё не&nbsp;знакомы, можно начать со&nbsp;встречи-знакомства:
-            15&nbsp;минут, бесплатно. Вы&nbsp;зададите вопросы, и&nbsp;мы поймём,
-            подойдём ли&nbsp;друг другу.
+            15&nbsp;минут, бесплатно.
           </p>
           <a
             href="/znakomstvo#zapis"

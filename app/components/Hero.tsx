@@ -50,7 +50,7 @@ export default function Hero({
             </p>
 
             {/* Desktop CTA — hidden on mobile */}
-            <div className="hidden md:flex flex-col items-start gap-3 mt-8 md:mt-10">
+            <div className="hidden md:flex flex-col items-start gap-3 mt-8 md:mt-10 w-full max-w-[420px]">
               {ctaEyebrow && (
                 <p className="font-heading text-[12px] md:text-[13px] uppercase tracking-[0.18em] text-accent font-medium">
                   {ctaEyebrow}
@@ -59,7 +59,7 @@ export default function Hero({
               <a
                 href="#zapis"
                 data-ym-goal={ctaGoal}
-                className="inline-flex min-w-[240px] items-center justify-center rounded-lg bg-accent px-10 py-4 text-base md:text-lg font-medium text-bg transition-colors hover:bg-accent-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
+                className="inline-flex w-full items-center justify-center rounded-lg bg-accent px-10 py-4 text-base md:text-lg font-medium text-bg transition-colors hover:bg-accent-dark focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
               >
                 {ctaLabel}
               </a>
@@ -67,16 +67,16 @@ export default function Hero({
                 <a
                   href="/znakomstvo#zapis"
                   data-ym-goal="click_znakomstvo_from_home_hero"
-                  className="mt-1 text-[14px] md:text-[15px] text-text-muted hover:text-accent transition-colors"
+                  className="inline-flex w-full items-center justify-center text-center rounded-lg border border-accent bg-transparent px-6 py-3.5 text-[15px] md:text-base font-medium text-accent leading-snug transition-colors hover:bg-accent hover:text-bg focus:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-bg"
                 >
-                  Обращаетесь впервые? Запишитесь на&nbsp;вводную встречу: 15&nbsp;мин, бесплатно →
+                  Обращаетесь впервые? Вводная встреча 15&nbsp;мин, бесплатно&nbsp;→
                 </a>
               )}
             </div>
           </div>
 
           {/* Mobile CTA — hidden on desktop, after photo */}
-          <div className="md:hidden order-3 flex flex-col items-center gap-2.5">
+          <div className="md:hidden order-3 flex flex-col items-center gap-2.5 w-full max-w-[420px] mx-auto">
             {ctaEyebrow && (
               <p className="font-heading text-[11px] uppercase tracking-[0.18em] text-accent font-medium">
                 {ctaEyebrow}
@@ -85,7 +85,7 @@ export default function Hero({
             <a
               href="#zapis"
               data-ym-goal={ctaGoal}
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-lg bg-accent px-6 py-3 text-[15px] font-medium text-bg transition-colors hover:bg-accent-dark"
+              className="inline-flex w-full items-center justify-center rounded-lg bg-accent px-6 py-3 text-[15px] font-medium text-bg transition-colors hover:bg-accent-dark"
             >
               {ctaLabel}
             </a>
@@ -93,9 +93,9 @@ export default function Hero({
               <a
                 href="/znakomstvo#zapis"
                 data-ym-goal="click_znakomstvo_from_home_hero"
-                className="mt-1 text-center text-[13px] text-text-muted hover:text-accent transition-colors"
+                className="inline-flex w-full items-center justify-center text-center rounded-lg border border-accent bg-transparent px-5 py-3 text-[14px] font-medium text-accent leading-tight transition-colors hover:bg-accent hover:text-bg"
               >
-                Обращаетесь впервые? Запишитесь на&nbsp;вводную встречу: 15&nbsp;мин, бесплатно →
+                Обращаетесь впервые? Вводная встреча 15&nbsp;мин, бесплатно&nbsp;→
               </a>
             )}
           </div>
