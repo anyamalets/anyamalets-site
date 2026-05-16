@@ -4,12 +4,14 @@ type HeroProps = {
   ctaLabel?: string;
   ctaEyebrow?: string;
   ctaGoal?: string;
+  introLink?: boolean;
 };
 
 export default function Hero({
   ctaLabel = "Записаться на встречу",
   ctaEyebrow,
   ctaGoal = "click_zapis_button",
+  introLink = false,
 }: HeroProps) {
   return (
     <section className="relative w-full bg-bg overflow-hidden">
@@ -61,6 +63,15 @@ export default function Hero({
               >
                 {ctaLabel}
               </a>
+              {introLink && (
+                <a
+                  href="/znakomstvo#zapis"
+                  data-ym-goal="click_znakomstvo_from_home_hero"
+                  className="mt-1 text-[14px] md:text-[15px] text-text-muted hover:text-accent transition-colors"
+                >
+                  Обращаетесь впервые? Запишитесь на&nbsp;вводную встречу: 15&nbsp;мин, бесплатно →
+                </a>
+              )}
             </div>
           </div>
 
@@ -78,6 +89,15 @@ export default function Hero({
             >
               {ctaLabel}
             </a>
+            {introLink && (
+              <a
+                href="/znakomstvo#zapis"
+                data-ym-goal="click_znakomstvo_from_home_hero"
+                className="mt-1 text-center text-[13px] text-text-muted hover:text-accent transition-colors"
+              >
+                Обращаетесь впервые? Запишитесь на&nbsp;вводную встречу: 15&nbsp;мин, бесплатно →
+              </a>
+            )}
           </div>
         </div>
       </div>
