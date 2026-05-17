@@ -44,11 +44,30 @@ export default function Pricing() {
           </p>
         </div>
 
-        {/* Note under price card */}
-        <p className="mt-8 md:mt-10 mx-auto max-w-[520px] text-center text-[15px] md:text-[16px] leading-[1.6] text-text-muted">
-          После бронирования я&nbsp;отвечу в&nbsp;течение суток — подтвержу
-          встречу и&nbsp;пришлю ссылку для оплаты.
-        </p>
+        {/* Trust checklist */}
+        <ul className="mt-10 md:mt-12 mx-auto max-w-[560px] flex flex-col gap-3 md:gap-4 text-[15px] md:text-[16px] leading-[1.55] text-text">
+          {[
+            "Отвечу вам в течение суток. Оплата после подтверждения, после оплаты вы получите чек.",
+            "Перенос или отмена за 24 часа до начала.",
+            "Можно прекратить встречи в любой момент, это нормально.",
+          ].map((item) => (
+            <li key={item} className="flex items-start gap-3">
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                className="shrink-0 mt-0.5 h-5 w-5 text-accent"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.25"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+              <span>{item}</span>
+            </li>
+          ))}
+        </ul>
 
         {/* Planerka widget — loaded lazily when the user approaches this section */}
         <div className="mt-12 md:mt-16">

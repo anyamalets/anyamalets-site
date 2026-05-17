@@ -4,6 +4,7 @@ import Recognize from "./components/Recognize";
 import Methods from "./components/Methods";
 import Changes from "./components/Changes";
 import Credentials from "./components/Credentials";
+import IntroCta from "./components/IntroCta";
 import Boundaries from "./components/Boundaries";
 import About from "./components/About";
 import Education from "./components/Education";
@@ -109,6 +110,7 @@ export default function Home() {
         <Recognize />
         <Methods />
         <Changes />
+        <IntroCta goalSuffix="after_changes" />
         <Credentials />
         <Boundaries />
         <About />
