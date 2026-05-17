@@ -110,12 +110,25 @@ export default function Home() {
         <Recognize />
         <Methods />
         <Changes />
-        <IntroCta goalSuffix="after_changes" />
+        <IntroCta
+          text="Первый шаг может быть маленьким — вводная встреча, 15 мин, бесплатно."
+          ctaLabel="Записаться на вводную встречу →"
+          ctaHref="/znakomstvo#zapis"
+          goal="click_znakomstvo_from_home_after_changes"
+          variant="outline"
+        />
         <Credentials />
         <Boundaries />
         <About />
         <Education />
         <FirstSession />
+        <IntroCta
+          text="Готовы записаться? Время и день можно выбрать ниже."
+          ctaLabel="Записаться на встречу →"
+          ctaHref="#zapis"
+          goal="click_zapis_after_first_session"
+          variant="solid"
+        />
         <Faq />
         <Pricing />
       </main>
