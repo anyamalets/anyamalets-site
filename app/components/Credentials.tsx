@@ -45,7 +45,7 @@ export default function Credentials() {
           {/* Профессиональные сообщества */}
           <FadeIn>
             <div className="flex flex-col gap-5">
-              <p className="font-heading text-[12px] md:text-[13px] uppercase tracking-[0.18em] text-accent font-medium">
+              <p className="text-[15px] md:text-[16px] font-medium text-text-muted">
                 Профессиональные сообщества
               </p>
               <ul className="flex flex-col gap-5 md:gap-6">
@@ -70,7 +70,7 @@ export default function Credentials() {
           {/* Стажировка */}
           <FadeIn delay={80}>
             <div className="flex flex-col gap-5">
-              <p className="font-heading text-[12px] md:text-[13px] uppercase tracking-[0.18em] text-accent font-medium">
+              <p className="text-[15px] md:text-[16px] font-medium text-text-muted">
                 Стажировка
               </p>
               <div
@@ -115,7 +115,7 @@ export default function Credentials() {
           {/* Тексты и публикации */}
           <FadeIn delay={240}>
             <div className="flex flex-col gap-5">
-              <p className="font-heading text-[12px] md:text-[13px] uppercase tracking-[0.18em] text-accent font-medium">
+              <p className="text-[15px] md:text-[16px] font-medium text-text-muted">
                 Тексты и&nbsp;публикации
               </p>
               <a

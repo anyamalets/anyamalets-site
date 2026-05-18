@@ -32,7 +32,7 @@ export default function Recognize() {
         <p className="mt-5 md:mt-6 max-w-[620px] mx-auto text-center text-base md:text-lg text-text-muted leading-[1.6]">
           Если что-то из&nbsp;этого узнаёте — вы&nbsp;не&nbsp;одна. И&nbsp;дело
           не&nbsp;в&nbsp;слабости характера или отсутствии силы воли. С&nbsp;этим
-          работают. Я&nbsp;помогаю.
+          работают.
         </p>
 
         <div className="mt-12 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-6 lg:gap-8">
