@@ -7,8 +7,8 @@ import Changes from "../components/Changes";
 import Credentials from "../components/Credentials";
 import Boundaries from "../components/Boundaries";
 import About from "../components/About";
-import Education from "../components/Education";
-import FirstSession from "../components/FirstSession";
+import IntroMeeting from "../components/IntroMeeting";
+import IntroCta from "../components/IntroCta";
 import Faq from "../components/Faq";
 import Footer from "../components/Footer";
 import StickyMobileCTA from "../components/StickyMobileCTA";
@@ -39,8 +39,13 @@ export default function ZnakomstvoPage() {
         <Credentials />
         <Boundaries />
         <About />
-        <Education />
-        <FirstSession />
+        <IntroCta
+          ctaLabel="Записаться на вводную встречу →"
+          ctaHref="#zapis"
+          goal="click_znakomstvo_intropage_after_about"
+          variant="outline"
+        />
+        <IntroMeeting />
         <Faq />
 
         <section id="zapis" className="bg-bg-soft text-text py-16 md:py-24">

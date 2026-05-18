@@ -1,5 +1,5 @@
 type IntroCtaProps = {
-  text: string;
+  text?: string;
   ctaLabel: string;
   ctaHref: string;
   goal: string;
@@ -22,9 +22,11 @@ export default function IntroCta({
     <section className="relative w-full bg-bg-beige">
       <div className="mx-auto max-w-[1200px] px-6 md:px-10 lg:px-14 pt-0 pb-16 md:pb-20">
         <div className="max-w-[860px] flex flex-col items-start gap-5 md:gap-6">
-          <p className="text-[17px] md:text-[19px] leading-[1.5] text-text max-w-[640px]">
-            {text}
-          </p>
+          {text && (
+            <p className="text-[17px] md:text-[19px] leading-[1.5] text-text max-w-[640px]">
+              {text}
+            </p>
+          )}
           <a
             href={ctaHref}
             data-ym-goal={goal}
